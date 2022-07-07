@@ -1,1 +1,1 @@
-export { default } from './MallBreadcrumbs';
+export { default } from './MallProductCard';
