@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 // import { IMallProductCard } from "./IMallProductCard";
 import "./MallProductCard.css";
 import img from "../../assets/test-img.jpg";
@@ -7,10 +7,19 @@ import icon2 from "../../assets/icon-2.png";
 import icon3 from "../../assets/icon-3.png";
 import heart from "../../assets/icon-heart.svg";
 import compare from "../../assets/icon-compare.svg";
+import description from "../../assets/icon-description.svg";
+import chars from "../../assets/icon-characteristics.svg";
 
 const MallProductCard = () => {
+  const [activeButton, setActiveButton] = useState(true);
+
+  const onClickDescriptionHandler = () => {
+    setActiveButton(!activeButton);
+  };
+
   return (
     <>
+      <h3 className="mall-product-card__title">Диван Лени Textile Rustic</h3>
       <div className="mall-product-card">
         <div className="mall-small-images">
           <img src={icon1} alt="icon" />
@@ -51,6 +60,59 @@ const MallProductCard = () => {
                 <span></span>Зеленый
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="mall-product-card__footer">
+        <div className="mall-footer__buttons">
+          <button
+            className={activeButton ? "" : "button-disabled"}
+            onClick={onClickDescriptionHandler}
+          >
+            <img src={description} alt="icon" /> Описание товара
+          </button>
+          <button className="button-disabled">
+            <img src={chars} alt="icon" /> Характеристики
+          </button>
+        </div>
+        <div className="mall-footer__description">
+          <p
+            className={
+              activeButton ? "description-active" : "description-disabled"
+            }
+          >
+            Компактный диван «Каир» с универсальным углом гармонично впишется в
+            любой современный или сдержанный классический интерьер. Эта модель
+            представлена в практичной и износостойкой обивке из рогожки.
+            Особенностью дивана является отсутствие подлокотников, что
+            значительно увеличивает площадь посадочных мест, которых в данной
+            модели предусмотрено три.
+          </p>
+          <div className="mall-description__characteristics">
+            <table className="table">
+              <tbody>
+                <tr>
+                  <td>Ткань</td>
+                  <td>Хлопок</td>
+                </tr>
+                <tr>
+                  <td>Вес</td>
+                  <td>50 кг</td>
+                </tr>
+                <tr>
+                  <td>Раскладной</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Ширина</td>
+                  <td>150 см</td>
+                </tr>
+                <tr>
+                  <td>Глубина</td>
+                  <td>80 см</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

@@ -7,6 +7,11 @@ export interface IMallProductCard {
   _id?: string;
 
   /**
+   * Название товара
+   */
+  title: string;
+
+  /**
    * Краткое описание (on/off)
    */
   shortDescription: boolean;
