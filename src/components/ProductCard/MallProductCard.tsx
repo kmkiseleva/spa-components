@@ -11,10 +11,12 @@ import description from "../../assets/icon-description.svg";
 import chars from "../../assets/icon-characteristics.svg";
 
 const MallProductCard = () => {
-  const [activeButton, setActiveButton] = useState(true);
+  const [active, setActive] = useState("description");
 
-  const onClickDescriptionHandler = () => {
-    setActiveButton(!activeButton);
+  const onClickHandler = (e: any) => {
+    if (e.target.textContent.trim() === "Описание товара")
+      setActive("description");
+    if (e.target.textContent.trim() === "Характеристики") setActive("chars");
   };
 
   return (
@@ -66,19 +68,24 @@ const MallProductCard = () => {
       <div className="mall-product-card__footer">
         <div className="mall-footer__buttons">
           <button
-            className={activeButton ? "" : "button-disabled"}
-            onClick={onClickDescriptionHandler}
+            className={active === "description" ? "" : "button-disabled"}
+            onClick={onClickHandler}
           >
             <img src={description} alt="icon" /> Описание товара
           </button>
-          <button className="button-disabled">
+          <button
+            className={active === "description" ? "button-disabled" : ""}
+            onClick={onClickHandler}
+          >
             <img src={chars} alt="icon" /> Характеристики
           </button>
         </div>
         <div className="mall-footer__description">
           <p
             className={
-              activeButton ? "description-active" : "description-disabled"
+              active === "description"
+                ? "description-active"
+                : "description-disabled"
             }
           >
             Компактный диван «Каир» с универсальным углом гармонично впишется в
@@ -88,7 +95,9 @@ const MallProductCard = () => {
             значительно увеличивает площадь посадочных мест, которых в данной
             модели предусмотрено три.
           </p>
-          <div className="mall-description__characteristics">
+          <div
+            className={active === "description" ? "description-disabled" : ""}
+          >
             <table className="table">
               <tbody>
                 <tr>

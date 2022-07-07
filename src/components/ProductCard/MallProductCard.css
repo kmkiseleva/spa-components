@@ -161,10 +161,6 @@ button {
   opacity: 0.8;
 }
 
-.mall-description__characteristics {
-  display: none;
-}
-
 .table {
   table-layout: fixed;
   width: 100%;
