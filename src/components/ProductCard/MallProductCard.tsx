@@ -15,6 +15,7 @@ const MallProductCard: FC<IMallProductCard> = ({
   margin,
   title,
   description,
+  characteristics,
   actualPrice,
   oldPrice,
   oldPriceValue,
@@ -124,7 +125,10 @@ const MallProductCard: FC<IMallProductCard> = ({
           </div>
         </div>
       </div>
-      <MallProductCardDescription description={description} />
+      <MallProductCardDescription
+        description={description}
+        characteristics={characteristics}
+      />
     </div>
   );
 };

@@ -1,7 +1,17 @@
 import { SyntheticEvent } from 'react';
 
-export type Description = {description: string};
 export type ProductColors = {name: string; value: string};
+export type Description = {description: string};
+export type Characteristics = {name: string; value: string};
+
+export interface IMallProductCardDescription {
+  /**
+   * Описание карточки товара
+   */
+  description: string;
+  characteristics: Characteristics[]
+}
+
 
 export interface IMallProductCard {
   /**
@@ -23,6 +33,11 @@ export interface IMallProductCard {
    * Описание карточки товара
    */
   description: string;
+
+  /**
+   * Характеристики карточки товара
+   */
+   characteristics: Characteristics[];
 
   /**
    * Актуальная цена товара

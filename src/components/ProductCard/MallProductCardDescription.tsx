@@ -1,10 +1,13 @@
 import React, { FC, useState } from "react";
 import "./MallProductCard.css";
-import { Description } from "./IMallProductCard";
+import { IMallProductCardDescription } from "./IMallProductCard";
 import descriptionIcon from "../../assets/icon-description.svg";
 import charsIcon from "../../assets/icon-characteristics.svg";
 
-const MallProductCardDescription: FC<Description> = ({ description }) => {
+const MallProductCardDescription: FC<IMallProductCardDescription> = ({
+  description,
+  characteristics,
+}) => {
   const [active, setActive] = useState("description");
 
   return (
@@ -39,26 +42,12 @@ const MallProductCardDescription: FC<Description> = ({ description }) => {
           >
             <table className="table">
               <tbody>
-                <tr>
-                  <td>Ткань</td>
-                  <td>Хлопок</td>
-                </tr>
-                <tr>
-                  <td>Вес</td>
-                  <td>50 кг</td>
-                </tr>
-                <tr>
-                  <td>Раскладной</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>Ширина</td>
-                  <td>150 см</td>
-                </tr>
-                <tr>
-                  <td>Глубина</td>
-                  <td>80 см</td>
-                </tr>
+                {characteristics.map((item) => (
+                  <tr>
+                    <td>{item.name}</td>
+                    <td>{item.value}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
