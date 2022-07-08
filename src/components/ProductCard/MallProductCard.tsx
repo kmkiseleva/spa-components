@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import "./MallProductCard.css";
 import { IMallProductCard } from "./IMallProductCard";
 import MallProductCardDescription from "./MallProductCardDescription";
@@ -14,14 +14,31 @@ import plus from "../../assets/plus.svg";
 const MallProductCard: FC<IMallProductCard> = ({
   title,
   description,
+  actualPrice,
   oldPrice,
   oldPriceValue,
   labelNew,
   productColors,
+  available,
+  cartButtonBackground,
+  onClickCartButton,
   margin,
 }) => {
   const styleSettings = {
     margin: margin,
+  };
+
+  const [value, setValue] = useState(1);
+
+  const decrementHandler = (value: number) => {
+    if (value === 0) return;
+    let newValue = value - 1;
+    setValue(newValue);
+  };
+
+  const incrementHandler = (value: number) => {
+    let newValue = value + 1;
+    setValue(newValue);
   };
 
   return (
@@ -57,18 +74,18 @@ const MallProductCard: FC<IMallProductCard> = ({
           <div className="mall-description__color">
             <h3>Цвет</h3>
             <div className="mall-color__buttons">
-              {productColors.map((color) => (
-                <button>
+              {productColors.map((color, index) => (
+                <button key={index}>
                   <span style={{ backgroundColor: color.value }}></span>
                   {color.name}
                 </button>
               ))}
             </div>
             <div className="mall-available__label">
-              В наличии <span>2 шт</span>
+              В наличии <span>{available} шт</span>
             </div>
             <div className="mall-prices">
-              <span className="mall-prices__actual">17 050 &#8381;</span>
+              <span className="mall-prices__actual">{actualPrice} &#8381;</span>
               {oldPrice && (
                 <span className="mall-prices__old">
                   {oldPriceValue} &#8381;
@@ -76,14 +93,31 @@ const MallProductCard: FC<IMallProductCard> = ({
               )}
             </div>
             <div className="mall-cart__block">
-              <button className="mall-cart__counter">
+              <button
+                className="mall-cart__counter"
+                onClick={() => decrementHandler(value)}
+              >
                 <img src={minus} alt="minus" />
               </button>
-              <input className="mall-cart__input" type="text" value={1} />
-              <button className="mall-cart__counter">
+              <input
+                className="mall-cart__input"
+                type="text"
+                value={value}
+                onChange={(e) => setValue(Number(e.target.value))}
+              />
+              <button
+                className="mall-cart__counter"
+                onClick={() => incrementHandler(value)}
+              >
                 <img src={plus} alt="plus" />
               </button>
-              <button className="mall-cart__button">В корзину</button>
+              <button
+                style={{ background: cartButtonBackground }}
+                className="mall-cart__button"
+                onClick={onClickCartButton}
+              >
+                В корзину
+              </button>
             </div>
           </div>
         </div>

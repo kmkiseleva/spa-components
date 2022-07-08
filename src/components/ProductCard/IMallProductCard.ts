@@ -1,3 +1,5 @@
+import { SyntheticEvent } from 'react';
+
 export type Description = {description: string};
 export type ProductColors = {name: string; value: string};
 
@@ -15,7 +17,12 @@ export interface IMallProductCard {
   /**
    * Описание карточки товара
    */
-   description: string;
+  description: string;
+
+  /**
+   * Описание карточки товара
+   */
+  actualPrice: string; 
 
   /**
    * Старая цена (on/off)
@@ -36,26 +43,21 @@ export interface IMallProductCard {
    * Массив цветов
    */
   productColors: ProductColors[];
+
+  /**
+   * Количество в наличии
+   */
+  available: string;
  
-  // /**
-  //   * Кнопка корзины (цвет фона кнопки)
-  //   */
-  // buttonBackground: string;
-
-  // /**
-  //   * Кнопка корзины (закругление углов кнопки)
-  //   */
-  // buttonBorderRadius: string;
-
-  //  /**
-  //   * Кнопка корзины (цвет текста кнопки)
-  //   */
-  // buttonColor: string;
+  /**
+    * Кнопка корзины (цвет фона кнопки)
+    */
+  cartButtonBackground: string;
 
   /**
    * Обработчик клика по кнопке корзины
    */
-    //  onClickCartButton?: (evt?: SyntheticEvent) => void;
+  onClickCartButton?: (evt?: SyntheticEvent) => void;
 
   /**
    * Внешние отступы
