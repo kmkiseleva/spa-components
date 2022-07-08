@@ -10,6 +10,11 @@ export interface IMallProductCard {
   _id?: string;
 
   /**
+   * Внешние отступы карточки товара
+   */
+  margin?: string;
+
+  /**
    * Название товара
    */
   title: string;
@@ -20,7 +25,7 @@ export interface IMallProductCard {
   description: string;
 
   /**
-   * Описание карточки товара
+   * Актуальная цена товара
    */
   actualPrice: string; 
 
@@ -40,12 +45,12 @@ export interface IMallProductCard {
   labelNew: boolean;
 
   /**
-   * Массив цветов
+   * Массив цветов товара
    */
   productColors: ProductColors[];
 
   /**
-   * Количество в наличии
+   * Количество товара в наличии
    */
   available: string;
  
@@ -55,12 +60,17 @@ export interface IMallProductCard {
   cartButtonBackground: string;
 
   /**
+   * Обработчик клика по кнопке Избранное
+   */
+  onClickFavoritesButton?: (evt?: SyntheticEvent) => void;
+
+  /**
+   * Обработчик клика по кнопке Избранное
+   */
+  onClickCompareButton?: (evt?: SyntheticEvent) => void;
+
+  /**
    * Обработчик клика по кнопке корзины
    */
   onClickCartButton?: (evt?: SyntheticEvent) => void;
-
-  /**
-   * Внешние отступы
-   */
-  margin?: string;
 }

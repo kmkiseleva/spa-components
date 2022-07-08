@@ -12,6 +12,7 @@ import minus from "../../assets/minus.svg";
 import plus from "../../assets/plus.svg";
 
 const MallProductCard: FC<IMallProductCard> = ({
+  margin,
   title,
   description,
   actualPrice,
@@ -21,8 +22,9 @@ const MallProductCard: FC<IMallProductCard> = ({
   productColors,
   available,
   cartButtonBackground,
+  onClickFavoritesButton,
+  onClickCompareButton,
   onClickCartButton,
-  margin,
 }) => {
   const styleSettings = {
     margin: margin,
@@ -55,10 +57,10 @@ const MallProductCard: FC<IMallProductCard> = ({
         </div>
         <div className="mall-product-card__description">
           <div className="mall-description-top__buttons">
-            <button>
+            <button onClick={onClickFavoritesButton}>
               <img src={heart} alt="icon" /> Избранное
             </button>
-            <button>
+            <button onClick={onClickCompareButton}>
               <img src={compare} alt="icon" /> Сравнить
             </button>
           </div>
