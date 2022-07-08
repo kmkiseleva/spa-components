@@ -4,6 +4,10 @@ button {
   border: none;
 }
 
+.mall-product-card__block {
+  margin: 32px;
+}
+
 .mall-product-card__title {
   font-weight: 600;
   font-size: 40px;
@@ -15,7 +19,10 @@ button {
   display: flex;
   padding: 48px 0px 0px;
   max-width: 1240px;
-  height: 528px;
+}
+
+.mall-product-card__gallery {
+  display: flex;
 }
 
 .mall-small-images {
@@ -28,12 +35,12 @@ button {
   margin-right: 60px;
 }
 
-.mall-description-top__buttons {
+.mall-details-top__buttons {
   display: flex;
   margin-bottom: 24px;
 }
 
-.mall-description-top__buttons button {
+.mall-details-top__buttons button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,11 +55,11 @@ button {
   line-height: 22px;
 }
 
-.mall-description-top__buttons button img {
+.mall-details-top__buttons button img {
   margin-right: 10px;
 }
 
-.mall-description__label {
+.mall-details__label {
   width: 71px;
   height: 20px;
   font-weight: 400;
@@ -65,8 +72,8 @@ button {
   text-align: center;
 }
 
-.mall-description__size h3,
-.mall-description__color h3 {
+.mall-details__size h3,
+.mall-details__color h3 {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
@@ -174,6 +181,10 @@ button {
   color: #ffffff;
 }
 
+.mall-product-card__footer {
+  width: 100%;
+}
+
 .mall-footer__buttons {
   display: flex;
   align-items: center;
@@ -216,7 +227,7 @@ button {
 }
 
 .mall-footer__description p {
-  width: 710px;
+  max-width: 710px;
   opacity: 0.8;
 }
 
@@ -246,4 +257,59 @@ button {
 
 .table tbody tr:nth-child(even) {
   background: #fff;
+}
+
+@media (max-width: 320px) {
+  .mall-product-card__block {
+    margin: 16px;
+  }
+
+  .mall-product-card__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .mall-product-card {
+    flex-wrap: wrap;
+    padding-top: 0;
+  }
+
+  .mall-product-card__gallery {
+    flex-wrap: wrap;
+  }
+
+  .mall-product-card__image {
+    order: 1;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .mall-product-card__image img {
+    display: block;
+    width: 288px;
+  }
+
+  .mall-small-images {
+    order: 2;
+    display: flex;
+    margin-bottom: 32px;
+  }
+
+  .mall-small-images img {
+    margin-right: 9px;
+  }
+
+  .mall-color__buttons {
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .mall-size__buttons button,
+  .mall-color__buttons button {
+    margin-bottom: 5px;
+  }
+
+  .mall-cart__block {
+    margin-bottom: 65px;
+  }
 }

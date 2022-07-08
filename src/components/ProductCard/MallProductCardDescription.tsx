@@ -21,7 +21,7 @@ const MallProductCardDescription: FC<IMallProductCardDescription> = ({
             <img src={descriptionIcon} alt="icon" /> Описание товара
           </button>
           <button
-            className={active === "description" ? "button-disabled" : ""}
+            className={active === "char" ? "" : "button-disabled"}
             onClick={() => setActive("chars")}
           >
             <img src={charsIcon} alt="icon" /> Характеристики
@@ -42,8 +42,8 @@ const MallProductCardDescription: FC<IMallProductCardDescription> = ({
           >
             <table className="table">
               <tbody>
-                {characteristics.map((item) => (
-                  <tr>
+                {characteristics.map((item, index) => (
+                  <tr key={index}>
                     <td>{item.name}</td>
                     <td>{item.value}</td>
                   </tr>

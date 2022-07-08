@@ -20,11 +20,6 @@ export interface IMallProductCard {
   _id?: string;
 
   /**
-   * Внешние отступы карточки товара
-   */
-  margin?: string;
-
-  /**
    * Название товара
    */
   title: string;

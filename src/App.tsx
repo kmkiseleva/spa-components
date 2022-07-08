@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="App">
       <MallProductCard
-        margin="32px"
         title="Диван Лени Textile Rustic"
         description="Компактный диван «Каир» с универсальным углом гармонично впишется в
             любой современный или сдержанный классический интерьер. Эта модель
