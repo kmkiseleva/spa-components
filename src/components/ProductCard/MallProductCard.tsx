@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-// import { IMallProductCard } from "./IMallProductCard";
 import "./MallProductCard.css";
+import { IMallProductCard } from "./IMallProductCard";
 import MallProductCardDescription from "./MallProductCardDescription";
 import img from "../../assets/test-img.jpg";
 import icon1 from "../../assets/icon-1.png";
@@ -11,7 +11,7 @@ import compare from "../../assets/icon-compare.svg";
 import minus from "../../assets/minus.svg";
 import plus from "../../assets/plus.svg";
 
-const MallProductCard = () => {
+const MallProductCard: FC<IMallProductCard> = ({ description }) => {
   return (
     <>
       <h3 className="mall-product-card__title">Диван Лени Textile Rustic</h3>
@@ -75,7 +75,7 @@ const MallProductCard = () => {
           </div>
         </div>
       </div>
-      <MallProductCardDescription />
+      <MallProductCardDescription description={description} />
     </>
   );
 };

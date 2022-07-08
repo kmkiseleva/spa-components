@@ -1,10 +1,10 @@
 import React, { FC, useState } from "react";
-// import { IMallProductCard } from "./IMallProductCard";
 import "./MallProductCard.css";
-import description from "../../assets/icon-description.svg";
-import chars from "../../assets/icon-characteristics.svg";
+import { Description } from "./IMallProductCard";
+import descriptionIcon from "../../assets/icon-description.svg";
+import charsIcon from "../../assets/icon-characteristics.svg";
 
-const MallProductCardDescription = () => {
+const MallProductCardDescription: FC<Description> = ({ description }) => {
   const [active, setActive] = useState("description");
 
   return (
@@ -15,13 +15,13 @@ const MallProductCardDescription = () => {
             className={active === "description" ? "" : "button-disabled"}
             onClick={() => setActive("description")}
           >
-            <img src={description} alt="icon" /> Описание товара
+            <img src={descriptionIcon} alt="icon" /> Описание товара
           </button>
           <button
             className={active === "description" ? "button-disabled" : ""}
             onClick={() => setActive("chars")}
           >
-            <img src={chars} alt="icon" /> Характеристики
+            <img src={charsIcon} alt="icon" /> Характеристики
           </button>
         </div>
         <div className="mall-footer__description">
@@ -32,12 +32,7 @@ const MallProductCardDescription = () => {
                 : "description-disabled"
             }
           >
-            Компактный диван «Каир» с универсальным углом гармонично впишется в
-            любой современный или сдержанный классический интерьер. Эта модель
-            представлена в практичной и износостойкой обивке из рогожки.
-            Особенностью дивана является отсутствие подлокотников, что
-            значительно увеличивает площадь посадочных мест, которых в данной
-            модели предусмотрено три.
+            {description}
           </p>
           <div
             className={active === "description" ? "description-disabled" : ""}

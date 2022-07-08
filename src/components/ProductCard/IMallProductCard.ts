@@ -1,4 +1,6 @@
-export type BreadcrumbsData = { url: string; name: string };
+// export type Characteristics = {name: string; value: string};
+// export type ProductCardData = { description: string; characteristics: Characteristics[] };
+export type Description = {description: string};
 
 export interface IMallProductCard {
   /**
@@ -9,80 +11,85 @@ export interface IMallProductCard {
   /**
    * Название товара
    */
-  title: string;
+  // title: string;
+
+  /**
+   * Описание карточки товара
+   */
+   description: string;
 
   /**
    * Краткое описание (on/off)
    */
-  shortDescription: boolean;
+  // shortDescription: boolean;
 
-  /**
-   * Старая цена (on/off)
-   */
-  oldPrice: boolean;
+  // /**
+  //  * Старая цена (on/off)
+  //  */
+  // oldPrice: boolean;
 
-  /**
-   * Лейбл  (on/off)
-   */
-  label: boolean;
+  // /**
+  //  * Лейбл  (on/off)
+  //  */
+  // label: boolean;
 
-  /**
-   * Артикул (on/off)
-   */
-  art: boolean;
+  // /**
+  //  * Артикул (on/off)
+  //  */
+  // art: boolean;
 
-  /**
-   * Цвет фона
-   */
-  backgroundColor: string;
+  // /**
+  //  * Цвет фона
+  //  */
+  // backgroundColor: string;
 
-  /**
-   * Тип границы и ее наличие
-   */
-  borderStyle?: 'solid' | 'dotted' | 'dashed' | 'double' | 'none';
+  // /**
+  //  * Тип границы и ее наличие
+  //  */
+  // borderStyle?: 'solid' | 'dotted' | 'dashed' | 'double' | 'none';
 
-  /**
-    * Толщина границы. Требует заданный borderStyle!
-    */
-  borderWidth?: string;
+  // /**
+  //   * Толщина границы. Требует заданный borderStyle!
+  //   */
+  // borderWidth?: string;
  
-  /**
-    * Цвет границы. Требует заданный borderStyle!
-    */
-  borderColor?: string;
+  // /**
+  //   * Цвет границы. Требует заданный borderStyle!
+  //   */
+  // borderColor?: string;
  
-  /**
-    * Закругление краев
-    */
-  borderRadius?: string;
+  // /**
+  //   * Закругление краев
+  //   */
+  // borderRadius?: string;
 
-  /**
-    * Кнопка корзины (ширина кнопки)
-    */
-  buttonWidth: string;
+  // /**
+  //   * Кнопка корзины (ширина кнопки)
+  //   */
+  // buttonWidth: string;
 
-  /**
-    * Кнопка корзины (высота кнопки)
-    */
-  buttonHeight: string;
+  // /**
+  //   * Кнопка корзины (высота кнопки)
+  //   */
+  // buttonHeight: string;
 
-  /**
-    * Кнопка корзины (цвет фона кнопки)
-    */
-  buttonBackground: string;
+  // /**
+  //   * Кнопка корзины (цвет фона кнопки)
+  //   */
+  // buttonBackground: string;
 
-  /**
-    * Кнопка корзины (закругление углов кнопки)
-    */
-  buttonBorderRadius: string;
+  // /**
+  //   * Кнопка корзины (закругление углов кнопки)
+  //   */
+  // buttonBorderRadius: string;
 
-   /**
-    * Кнопка корзины (цвет текста кнопки)
-    */
-  buttonColor: string;
+  //  /**
+  //   * Кнопка корзины (цвет текста кнопки)
+  //   */
+  // buttonColor: string;
 
-  /**
-   * Внешние отступы
-   */
-  margin?: string;
+  // /**
+  //  * Внешние отступы
+  //  */
+  // margin?: string;
 }
