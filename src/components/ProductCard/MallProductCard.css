@@ -9,7 +9,6 @@ button {
   font-size: 40px;
   line-height: 48px;
   color: #000000;
-  margin-left: 32px;
 }
 
 .mall-product-card {
@@ -17,10 +16,6 @@ button {
   padding: 48px 0px 0px;
   max-width: 1240px;
   height: 528px;
-  border: 1px solid salmon;
-  margin-left: 32px;
-  margin-right: 32px;
-  margin-bottom: 41px;
 }
 
 .mall-small-images {
@@ -178,11 +173,6 @@ button {
   font-size: 15px;
   line-height: 22px;
   color: #ffffff;
-}
-
-.mall-product-card__footer {
-  margin-left: 32px;
-  margin-right: 32px;
 }
 
 .mall-footer__buttons {

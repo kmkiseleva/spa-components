@@ -1,6 +1,5 @@
-// export type Characteristics = {name: string; value: string};
-// export type ProductCardData = { description: string; characteristics: Characteristics[] };
 export type Description = {description: string};
+export type ProductColors = {name: string; value: string};
 
 export interface IMallProductCard {
   /**
@@ -11,7 +10,7 @@ export interface IMallProductCard {
   /**
    * Название товара
    */
-  // title: string;
+  title: string;
 
   /**
    * Описание карточки товара
@@ -19,60 +18,25 @@ export interface IMallProductCard {
    description: string;
 
   /**
-   * Краткое описание (on/off)
+   * Старая цена (on/off)
    */
-  // shortDescription: boolean;
+  oldPrice: boolean;
 
-  // /**
-  //  * Старая цена (on/off)
-  //  */
-  // oldPrice: boolean;
+  /**
+   * Старая цена значение
+   */
+  oldPriceValue: string;
 
-  // /**
-  //  * Лейбл  (on/off)
-  //  */
-  // label: boolean;
+  /**
+   * Лейбл новинки  (on/off)
+   */
+  labelNew: boolean;
 
-  // /**
-  //  * Артикул (on/off)
-  //  */
-  // art: boolean;
-
-  // /**
-  //  * Цвет фона
-  //  */
-  // backgroundColor: string;
-
-  // /**
-  //  * Тип границы и ее наличие
-  //  */
-  // borderStyle?: 'solid' | 'dotted' | 'dashed' | 'double' | 'none';
-
-  // /**
-  //   * Толщина границы. Требует заданный borderStyle!
-  //   */
-  // borderWidth?: string;
+  /**
+   * Массив цветов
+   */
+  productColors: ProductColors[];
  
-  // /**
-  //   * Цвет границы. Требует заданный borderStyle!
-  //   */
-  // borderColor?: string;
- 
-  // /**
-  //   * Закругление краев
-  //   */
-  // borderRadius?: string;
-
-  // /**
-  //   * Кнопка корзины (ширина кнопки)
-  //   */
-  // buttonWidth: string;
-
-  // /**
-  //   * Кнопка корзины (высота кнопки)
-  //   */
-  // buttonHeight: string;
-
   // /**
   //   * Кнопка корзины (цвет фона кнопки)
   //   */
@@ -88,8 +52,13 @@ export interface IMallProductCard {
   //   */
   // buttonColor: string;
 
-  // /**
-  //  * Внешние отступы
-  //  */
-  // margin?: string;
+  /**
+   * Обработчик клика по кнопке корзины
+   */
+    //  onClickCartButton?: (evt?: SyntheticEvent) => void;
+
+  /**
+   * Внешние отступы
+   */
+  margin?: string;
 }

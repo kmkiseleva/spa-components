@@ -11,10 +11,22 @@ import compare from "../../assets/icon-compare.svg";
 import minus from "../../assets/minus.svg";
 import plus from "../../assets/plus.svg";
 
-const MallProductCard: FC<IMallProductCard> = ({ description }) => {
+const MallProductCard: FC<IMallProductCard> = ({
+  title,
+  description,
+  oldPrice,
+  oldPriceValue,
+  labelNew,
+  productColors,
+  margin,
+}) => {
+  const styleSettings = {
+    margin: margin,
+  };
+
   return (
-    <>
-      <h3 className="mall-product-card__title">Диван Лени Textile Rustic</h3>
+    <div style={styleSettings}>
+      <h3 className="mall-product-card__title">{title}</h3>
       <div className="mall-product-card">
         <div className="mall-small-images">
           <img src={icon1} alt="icon" />
@@ -33,7 +45,7 @@ const MallProductCard: FC<IMallProductCard> = ({ description }) => {
               <img src={compare} alt="icon" /> Сравнить
             </button>
           </div>
-          <div className="mall-description__label">Новинка</div>
+          {labelNew && <div className="mall-description__label">Новинка</div>}
           <div className="mall-description__size">
             <h3>Размер</h3>
             <div className="mall-size__buttons">
@@ -45,22 +57,23 @@ const MallProductCard: FC<IMallProductCard> = ({ description }) => {
           <div className="mall-description__color">
             <h3>Цвет</h3>
             <div className="mall-color__buttons">
-              <button>
-                <span></span> Красный
-              </button>
-              <button>
-                <span></span>Крабовый
-              </button>
-              <button>
-                <span></span>Зеленый
-              </button>
+              {productColors.map((color) => (
+                <button>
+                  <span style={{ backgroundColor: color.value }}></span>
+                  {color.name}
+                </button>
+              ))}
             </div>
             <div className="mall-available__label">
               В наличии <span>2 шт</span>
             </div>
             <div className="mall-prices">
               <span className="mall-prices__actual">17 050 &#8381;</span>
-              <span className="mall-prices__old">21 990 &#8381;</span>
+              {oldPrice && (
+                <span className="mall-prices__old">
+                  {oldPriceValue} &#8381;
+                </span>
+              )}
             </div>
             <div className="mall-cart__block">
               <button className="mall-cart__counter">
@@ -76,7 +89,7 @@ const MallProductCard: FC<IMallProductCard> = ({ description }) => {
         </div>
       </div>
       <MallProductCardDescription description={description} />
-    </>
+    </div>
   );
 };
 
