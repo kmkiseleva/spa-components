@@ -1,24 +1,17 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 // import { IMallProductCard } from "./IMallProductCard";
 import "./MallProductCard.css";
+import MallProductCardDescription from "./MallProductCardDescription";
 import img from "../../assets/test-img.jpg";
 import icon1 from "../../assets/icon-1.png";
 import icon2 from "../../assets/icon-2.png";
 import icon3 from "../../assets/icon-3.png";
 import heart from "../../assets/icon-heart.svg";
 import compare from "../../assets/icon-compare.svg";
-import description from "../../assets/icon-description.svg";
-import chars from "../../assets/icon-characteristics.svg";
+import minus from "../../assets/minus.svg";
+import plus from "../../assets/plus.svg";
 
 const MallProductCard = () => {
-  const [active, setActive] = useState("description");
-
-  const onClickHandler = (e: any) => {
-    if (e.target.textContent.trim() === "Описание товара")
-      setActive("description");
-    if (e.target.textContent.trim() === "Характеристики") setActive("chars");
-  };
-
   return (
     <>
       <h3 className="mall-product-card__title">Диван Лени Textile Rustic</h3>
@@ -62,69 +55,27 @@ const MallProductCard = () => {
                 <span></span>Зеленый
               </button>
             </div>
+            <div className="mall-available__label">
+              В наличии <span>2 шт</span>
+            </div>
+            <div className="mall-prices">
+              <span className="mall-prices__actual">17 050 &#8381;</span>
+              <span className="mall-prices__old">21 990 &#8381;</span>
+            </div>
+            <div className="mall-cart__block">
+              <button className="mall-cart__counter">
+                <img src={minus} alt="minus" />
+              </button>
+              <input className="mall-cart__input" type="text" value={1} />
+              <button className="mall-cart__counter">
+                <img src={plus} alt="plus" />
+              </button>
+              <button className="mall-cart__button">В корзину</button>
+            </div>
           </div>
         </div>
       </div>
-      <div className="mall-product-card__footer">
-        <div className="mall-footer__buttons">
-          <button
-            className={active === "description" ? "" : "button-disabled"}
-            onClick={onClickHandler}
-          >
-            <img src={description} alt="icon" /> Описание товара
-          </button>
-          <button
-            className={active === "description" ? "button-disabled" : ""}
-            onClick={onClickHandler}
-          >
-            <img src={chars} alt="icon" /> Характеристики
-          </button>
-        </div>
-        <div className="mall-footer__description">
-          <p
-            className={
-              active === "description"
-                ? "description-active"
-                : "description-disabled"
-            }
-          >
-            Компактный диван «Каир» с универсальным углом гармонично впишется в
-            любой современный или сдержанный классический интерьер. Эта модель
-            представлена в практичной и износостойкой обивке из рогожки.
-            Особенностью дивана является отсутствие подлокотников, что
-            значительно увеличивает площадь посадочных мест, которых в данной
-            модели предусмотрено три.
-          </p>
-          <div
-            className={active === "description" ? "description-disabled" : ""}
-          >
-            <table className="table">
-              <tbody>
-                <tr>
-                  <td>Ткань</td>
-                  <td>Хлопок</td>
-                </tr>
-                <tr>
-                  <td>Вес</td>
-                  <td>50 кг</td>
-                </tr>
-                <tr>
-                  <td>Раскладной</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>Ширина</td>
-                  <td>150 см</td>
-                </tr>
-                <tr>
-                  <td>Глубина</td>
-                  <td>80 см</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+      <MallProductCardDescription />
     </>
   );
 };
