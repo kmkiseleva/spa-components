@@ -1,5 +1,20 @@
 import { SyntheticEvent } from 'react';
-export interface IMallProductCard {
+
+export type ProductHeader = {title: string};
+export type ProductColors = {name: string; value: string};
+export type Description = {description: string};
+export type Characteristics = {name: string; value: string};
+
+export interface IMallProductCardDescription {
+  /**
+   * Описание карточки товара
+   */
+  description: string;
+  characteristics: Characteristics[]
+}
+
+
+export interface IMallProductCardPage {
   /**
    * Айдишник, нужен для внутренней работы конструктора
    */
@@ -14,6 +29,11 @@ export interface IMallProductCard {
    * Описание карточки товара
    */
   description: string;
+
+  /**
+   * Характеристики карточки товара
+   */
+  characteristics: Characteristics[];
 
   /**
    * Актуальная цена товара
@@ -39,6 +59,11 @@ export interface IMallProductCard {
    * Массив размеров товара
    */
   productSizes: string[];
+
+  /**
+   * Массив цветов товара
+   */
+  productColors: ProductColors[];
 
   /**
    * Количество товара в наличии

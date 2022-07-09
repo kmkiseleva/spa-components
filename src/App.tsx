@@ -1,10 +1,12 @@
 import "./App.css";
 import MallProductCard from "./components/ProductCard/MallProductCard";
+// import MallProductCardPage from "./components/ProductCardPage/MallProductCardPage";
 
 function App() {
   return (
     <div className="App">
-      <MallProductCard
+      <MallProductCard />
+      {/* <MallProductCardPage
         title="Диван Лени Textile Rustic"
         description="Компактный диван «Каир» с универсальным углом гармонично впишется в
             любой современный или сдержанный классический интерьер. Эта модель
@@ -36,7 +38,7 @@ function App() {
         onClickSizeButton={(value) => console.log(value)}
         onClickColorButton={(value) => console.log(value)}
         onClickCartButton={(value) => console.log(value)}
-      />
+      /> */}
     </div>
   );
 }

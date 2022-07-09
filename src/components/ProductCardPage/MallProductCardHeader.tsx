@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { ProductHeader } from "./IMallProductCard";
+import { ProductHeader } from "./IMallProductCardPage";
 import "./MallProductCard.css";
 
 const MallProductCardHeader: FC<ProductHeader> = ({ title }) => {

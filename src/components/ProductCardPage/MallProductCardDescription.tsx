@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import "./MallProductCard.css";
-import { IMallProductCardDescription } from "./IMallProductCard";
+import { IMallProductCardDescription } from "./IMallProductCardPage";
 import descriptionIcon from "../../assets/icon-description.svg";
 import charsIcon from "../../assets/icon-characteristics.svg";
 
