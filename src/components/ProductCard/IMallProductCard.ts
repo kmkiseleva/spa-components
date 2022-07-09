@@ -56,6 +56,11 @@ export interface IMallProductCard {
   labelNew: boolean;
 
   /**
+   * Массив размеров товара
+   */
+  productSizes: string[];
+
+  /**
    * Массив цветов товара
    */
   productColors: ProductColors[];

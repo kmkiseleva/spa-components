@@ -23,6 +23,7 @@ function App() {
         oldPrice={true}
         oldPriceValue="21 990"
         labelNew={true}
+        productSizes={["Большой", "Маленький", "Средний"]}
         productColors={[
           { name: "Красный", value: "red" },
           { name: "Крабовый", value: "pink" },

@@ -17,6 +17,7 @@ const MallProductCard: FC<IMallProductCard> = ({
   oldPrice,
   oldPriceValue,
   labelNew,
+  productSizes,
   productColors,
   available,
   cartButtonBackground,
@@ -58,9 +59,11 @@ const MallProductCard: FC<IMallProductCard> = ({
           <div className="mall-details__size">
             <h3>Размер</h3>
             <div className="mall-size__buttons">
-              <button>Большой</button>
-              <button>Средний</button>
-              <button>Маленький</button>
+              {productSizes.map((size, index) => (
+                <button key={index} onClick={() => onClickSizeButton(size)}>
+                  {size}
+                </button>
+              ))}
             </div>
           </div>
           <div className="mall-details__color">
