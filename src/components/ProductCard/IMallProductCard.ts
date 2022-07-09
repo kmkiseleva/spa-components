@@ -1,5 +1,6 @@
 import { SyntheticEvent } from 'react';
 
+export type ProductHeader = {title: string};
 export type ProductColors = {name: string; value: string};
 export type Description = {description: string};
 export type Characteristics = {name: string; value: string};
@@ -32,7 +33,7 @@ export interface IMallProductCard {
   /**
    * Характеристики карточки товара
    */
-   characteristics: Characteristics[];
+  characteristics: Characteristics[];
 
   /**
    * Актуальная цена товара
@@ -65,8 +66,8 @@ export interface IMallProductCard {
   available: string;
  
   /**
-    * Кнопка корзины (цвет фона кнопки)
-    */
+   * Кнопка корзины (цвет фона кнопки)
+   */
   cartButtonBackground: string;
 
   /**
@@ -80,7 +81,17 @@ export interface IMallProductCard {
   onClickCompareButton?: (evt?: SyntheticEvent) => void;
 
   /**
+   * Обработчик клика по кнопке размера
+   */
+  onClickSizeButton: (value: string) => void;
+
+  /**
+   * Обработчик клика по кнопке цвета
+   */
+  onClickColorButton: (value: string) => void;
+
+  /**
    * Обработчик клика по кнопке корзины
    */
-  onClickCartButton?: (evt?: SyntheticEvent) => void;
+  onClickCartButton: (value: number) => void;
 }

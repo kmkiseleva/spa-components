@@ -32,7 +32,9 @@ function App() {
         cartButtonBackground="#0364ED"
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickCompareButton={() => console.log("Compare")}
-        onClickCartButton={() => console.log("Cart")}
+        onClickSizeButton={(value) => console.log(value)}
+        onClickColorButton={(value) => console.log(value)}
+        onClickCartButton={(value) => console.log(value)}
       />
     </div>
   );

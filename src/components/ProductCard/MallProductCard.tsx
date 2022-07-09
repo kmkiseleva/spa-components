@@ -1,6 +1,7 @@
 import React, { FC, useState } from "react";
 import "./MallProductCard.css";
 import { IMallProductCard } from "./IMallProductCard";
+import MallProductCardHeader from "./MallProductCardHeader";
 import MallProductCardGallery from "./MallProductCardGallery";
 import MallProductCardDescription from "./MallProductCardDescription";
 import heart from "../../assets/icon-heart.svg";
@@ -21,6 +22,8 @@ const MallProductCard: FC<IMallProductCard> = ({
   cartButtonBackground,
   onClickFavoritesButton,
   onClickCompareButton,
+  onClickSizeButton,
+  onClickColorButton,
   onClickCartButton,
 }) => {
   const [value, setValue] = useState(1);
@@ -38,7 +41,7 @@ const MallProductCard: FC<IMallProductCard> = ({
 
   return (
     <div className="mall-product-card__block">
-      <h3 className="mall-product-card__title">{title}</h3>
+      <MallProductCardHeader title={title} />
       <div className="mall-product-card">
         <MallProductCardGallery />
 
@@ -64,7 +67,10 @@ const MallProductCard: FC<IMallProductCard> = ({
             <h3>Цвет</h3>
             <div className="mall-color__buttons">
               {productColors.map((color, index) => (
-                <button key={index}>
+                <button
+                  key={index}
+                  onClick={() => onClickColorButton(color.value)}
+                >
                   <span style={{ backgroundColor: color.value }}></span>
                   {color.name}
                 </button>
@@ -103,7 +109,7 @@ const MallProductCard: FC<IMallProductCard> = ({
               <button
                 style={{ background: cartButtonBackground }}
                 className="mall-cart__button"
-                onClick={onClickCartButton}
+                onClick={() => onClickCartButton(value)}
               >
                 В корзину
               </button>
