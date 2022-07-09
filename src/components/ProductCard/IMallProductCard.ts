@@ -11,14 +11,29 @@ export interface IMallProductCard {
   title: string;
 
   /**
-   * Описание карточки товара
+   * Артикул товара
    */
-  description: string;
+  articul: string;
+
+  /**
+   * Лейбл новинки  (on/off)
+   */
+  labelNew: boolean;
+
+  /**
+   * Количество товара в наличии (on/off)
+   */
+  available: boolean;
+
+  /**
+   * Количество товара в наличии
+   */
+  availableCount: string;
 
   /**
    * Актуальная цена товара
    */
-  actualPrice: string; 
+  actualPrice: string;
 
   /**
    * Старая цена (on/off)
@@ -29,26 +44,11 @@ export interface IMallProductCard {
    * Старая цена значение
    */
   oldPriceValue: string;
-
-  /**
-   * Лейбл новинки  (on/off)
-   */
-  labelNew: boolean;
-
-  /**
-   * Массив размеров товара
-   */
-  productSizes: string[];
-
-  /**
-   * Количество товара в наличии
-   */
-  available: string;
  
   /**
-   * Кнопка корзины (цвет фона кнопки)
+   * Кнопка корзины (длинная / иконка)
    */
-  cartButtonBackground: string;
+  cartButton: "long" | "icon";
 
   /**
    * Обработчик клика по кнопке Избранное
@@ -56,22 +56,12 @@ export interface IMallProductCard {
   onClickFavoritesButton?: (evt?: SyntheticEvent) => void;
 
   /**
-   * Обработчик клика по кнопке Избранное
+   * Обработчик клика по кнопке Сравнить
    */
   onClickCompareButton?: (evt?: SyntheticEvent) => void;
 
   /**
-   * Обработчик клика по кнопке размера
-   */
-  onClickSizeButton: (value: string) => void;
-
-  /**
-   * Обработчик клика по кнопке цвета
-   */
-  onClickColorButton: (value: string) => void;
-
-  /**
    * Обработчик клика по кнопке корзины
    */
-  onClickCartButton: (value: number) => void;
+  onClickCartButton: (evt?: SyntheticEvent) => void;
 }

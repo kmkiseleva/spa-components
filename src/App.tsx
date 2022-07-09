@@ -5,7 +5,21 @@ import MallProductCard from "./components/ProductCard/MallProductCard";
 function App() {
   return (
     <div className="App">
-      <MallProductCard />
+      <MallProductCard
+        title="Диван Лени Textile Rustic"
+        articul="P94M-LJ4K"
+        labelNew={true}
+        actualPrice="17050"
+        oldPrice={true}
+        oldPriceValue="21990"
+        available={true}
+        availableCount="2"
+        cartButton="long"
+        onClickFavoritesButton={() => console.log("Favorites")}
+        onClickCompareButton={() => console.log("Compare")}
+        onClickCartButton={() => console.log("Add To Cart")}
+      />
+
       {/* <MallProductCardPage
         title="Диван Лени Textile Rustic"
         description="Компактный диван «Каир» с универсальным углом гармонично впишется в

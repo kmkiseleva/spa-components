@@ -81,7 +81,7 @@ export interface IMallProductCardPage {
   onClickFavoritesButton?: (evt?: SyntheticEvent) => void;
 
   /**
-   * Обработчик клика по кнопке Избранное
+   * Обработчик клика по кнопке Сравнить
    */
   onClickCompareButton?: (evt?: SyntheticEvent) => void;
 
