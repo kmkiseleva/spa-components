@@ -4,6 +4,7 @@ import { IMallProductCard } from "./IMallProductCard";
 import compare from "../../assets/icon-compare.svg";
 import heart from "../../assets/icon-heart.svg";
 import image from "../../assets/test-img.jpg";
+import cart from "../../assets/icon-cart.svg";
 
 const MallProductCard = () => {
   return (
@@ -26,6 +27,12 @@ const MallProductCard = () => {
       <div className="mall-card__prices">
         <span>17 050 &#8381;</span>
         <span className="mall-prices__old">21 990 &#8381;</span>
+      </div>
+      <div className="mall-card__button">
+        <button className="mall-button__icon">
+          <img src={cart} alt="cart" />
+        </button>
+        {/* <button className="mall-button__long">В корзину</button> */}
       </div>
     </div>
   );
