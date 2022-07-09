@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import "./MallProductCard.css";
 import { IMallProductCard } from "./IMallProductCard";
 import compare from "../../assets/icon-compare.svg";
@@ -20,19 +20,27 @@ const MallProductCard: FC<IMallProductCard> = ({
   onClickCompareButton = () => console.log("Compare"),
   onClickCartButton = () => console.log("Add To Cart"),
 }) => {
+  const [active, setActive] = useState(false);
+
   return (
-    <div className="mall-card__block">
+    <div
+      className="mall-card__block"
+      onMouseOver={() => setActive(true)}
+      onMouseOut={() => setActive(false)}
+    >
       <div className="mall-card__labels">
         {labelNew && <p>Новинка</p>}
-        <div className="mall-labels__block">
-          <button onClick={onClickCompareButton}>
-            <img src={compare} alt="icon" />{" "}
-          </button>
+        {active && (
+          <div className="mall-labels__block">
+            <button onClick={onClickCompareButton}>
+              <img src={compare} alt="icon" />{" "}
+            </button>
 
-          <button onClick={onClickFavoritesButton}>
-            <img src={heart} alt="icon" />
-          </button>
-        </div>
+            <button onClick={onClickFavoritesButton}>
+              <img src={heart} alt="icon" />
+            </button>
+          </div>
+        )}
       </div>
       <div className="mall-card__image">
         <img src={image} alt="product" />
