@@ -65,7 +65,6 @@ button {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
-  color: #000000;
   margin: 0;
 }
 
@@ -73,7 +72,6 @@ button {
   font-weight: 400;
   font-size: 11px;
   line-height: 16px;
-  color: #8a8a8a;
   margin-top: 8px;
   margin-bottom: 20px;
 }
@@ -81,24 +79,17 @@ button {
 .mall-card__available {
   font-size: 11px;
   line-height: 16px;
-  color: #3bb273;
   margin-bottom: 8px;
-}
-
-.mall-card__available span {
-  color: #8a8a8a;
 }
 
 .mall-card__prices {
   font-weight: 500;
   font-size: 15px;
   line-height: 22px;
-  color: #000000;
 }
 
 .mall-prices__old {
   text-decoration-line: line-through;
-  color: #8a8a8a;
   margin-left: 8px;
 }
 
@@ -117,8 +108,7 @@ button {
   padding: 8px 16px;
   width: 216px;
   height: 40px;
-  border: 1px solid #0364ed;
+  border: 1px solid;
   border-radius: 4px;
-  color: #0364ed;
   margin-top: 20px;
 }

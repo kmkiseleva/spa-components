@@ -43,11 +43,6 @@ export interface IMallProductCard {
   actualPrice: string;
 
   /**
-   * Старая цена (on/off)
-   */
-  oldPrice: boolean;
-
-  /**
    * Старая цена значение
    */
   oldPriceValue: string;
@@ -56,6 +51,26 @@ export interface IMallProductCard {
    * Кнопка корзины (длинная / иконка)
    */
   cartButton: "button" | "icon";
+
+  /**
+   * Акцентный цвет
+   */
+  accentColor?: string;
+
+  /**
+   * Акцентный дополнительный цвет
+   */
+  accentSecondaryColor?: string;
+
+  /**
+   * Основной цвет текста
+   */
+  textMainColor?: string;
+
+  /**
+   * Второстепенный цвет текста
+   */
+  textSecondaryColor?: string; 
 
   /**
    * Обработчик клика по кнопке Избранное
