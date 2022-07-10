@@ -1,14 +1,15 @@
 import React, { FC, useState } from "react";
 import "./MallProductCard.css";
 import { IMallProductCard } from "./IMallProductCard";
-import compare from "../../assets/icon-compare.svg";
-import heart from "../../assets/icon-heart.svg";
-import image from "../../assets/test-img.jpg";
+import { ReactComponent as Compare } from "../../assets/icon-compare.svg";
+import { ReactComponent as Heart } from "../../assets/icon-heart.svg";
+import testImg from "../../assets/test-img.jpg";
 import { ReactComponent as Cart } from "../../assets/icon-cart.svg";
 
 const MallProductCard: FC<IMallProductCard> = ({
   title = "Диван Лени Textile Rustic",
   articul = "P94M-LJ4K",
+  image,
   labels = true,
   labelsValues = [
     { name: "new", value: "Новинка" },
@@ -56,17 +57,21 @@ const MallProductCard: FC<IMallProductCard> = ({
         {active && (
           <div className="mall-labels__block">
             <button onClick={onClickCompareButton}>
-              <img src={compare} alt="icon" />{" "}
+              <Compare style={{ fill: textSecondaryColor }} />
             </button>
 
             <button onClick={onClickFavoritesButton}>
-              <img src={heart} alt="icon" />
+              <Heart style={{ fill: textSecondaryColor }} />
             </button>
           </div>
         )}
       </div>
       <div className="mall-card__image">
-        <img src={image} alt="product" />
+        {image ? (
+          <img src={image} alt="product" />
+        ) : (
+          <img src={testImg} alt="product" />
+        )}
       </div>
       <h3 className="mall-card__title" style={{ color: textMainColor }}>
         {title}
