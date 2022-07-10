@@ -4,7 +4,7 @@ import { IMallProductCard } from "./IMallProductCard";
 import compare from "../../assets/icon-compare.svg";
 import heart from "../../assets/icon-heart.svg";
 import image from "../../assets/test-img.jpg";
-import cart from "../../assets/icon-cart.svg";
+import { ReactComponent as Cart } from "../../assets/icon-cart.svg";
 
 const MallProductCard: FC<IMallProductCard> = ({
   title = "Диван Лени Textile Rustic",
@@ -103,7 +103,7 @@ const MallProductCard: FC<IMallProductCard> = ({
           </button>
         ) : (
           <button className="mall-button__icon" onClick={onClickCartButton}>
-            <img src={cart} style={{ fill: accentColor }} alt="cart" />
+            <Cart style={{ fill: accentColor }} />
           </button>
         )}
       </div>
