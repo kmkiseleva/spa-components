@@ -18,7 +18,7 @@ function App() {
         oldPriceValue="21990"
         available={true}
         availableCount="2"
-        cartButton="icon"
+        cartButton="small"
         accentColor="#0364ED"
         accentSecondaryColor="#3BB273"
         textMainColor="#000000"

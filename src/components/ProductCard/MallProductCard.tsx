@@ -19,7 +19,7 @@ const MallProductCard: FC<IMallProductCard> = ({
   oldPriceValue = "21990",
   available = true,
   availableCount = "2",
-  cartButton = "button",
+  cartButton = "small",
   accentColor = "#0364ED",
   accentSecondaryColor = "#3BB273",
   textMainColor = "#000000",
@@ -93,7 +93,9 @@ const MallProductCard: FC<IMallProductCard> = ({
         </span>
       </div>
       <div className="mall-card__button">
-        {cartButton === "button" ? (
+        {cartButton === "none" ? (
+          ""
+        ) : cartButton === "big" ? (
           <button
             className="mall-button__long"
             style={{ color: accentColor, borderColor: accentColor }}

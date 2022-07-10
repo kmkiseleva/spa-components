@@ -50,7 +50,7 @@ export interface IMallProductCard {
   /**
    * Кнопка корзины (длинная / иконка)
    */
-  cartButton: "button" | "icon";
+  cartButton: "none" | "big" | "small";
 
   /**
    * Акцентный цвет
