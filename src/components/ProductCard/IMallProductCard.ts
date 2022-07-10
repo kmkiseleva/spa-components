@@ -1,4 +1,6 @@
 import { SyntheticEvent } from 'react';
+
+export type Labels = {name: string; value: string};
 export interface IMallProductCard {
   /**
    * Айдишник, нужен для внутренней работы конструктора
@@ -16,9 +18,14 @@ export interface IMallProductCard {
   articul: string;
 
   /**
-   * Лейбл новинки  (on/off)
+   * Лейблы (on/off)
    */
-  labelNew: boolean;
+  labels: boolean;
+
+  /**
+   * Лейблы (значения)
+   */
+  labelsValues: Labels[];
 
   /**
    * Количество товара в наличии (on/off)
@@ -48,7 +55,7 @@ export interface IMallProductCard {
   /**
    * Кнопка корзины (длинная / иконка)
    */
-  cartButton: "long" | "icon";
+  cartButton: "button" | "icon";
 
   /**
    * Обработчик клика по кнопке Избранное

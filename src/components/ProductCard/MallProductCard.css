@@ -25,8 +25,6 @@ button {
 
 .mall-card__labels p {
   padding: 0px 8px;
-  width: 71px;
-  background: #3bb273;
   border-radius: 2px;
   font-weight: 400;
   font-size: 13px;
@@ -34,6 +32,20 @@ button {
   color: #ffffff;
   text-align: center;
   margin: 0;
+  margin-right: 4px;
+}
+
+.mall-card__labels .labels__new {
+  background: #3bb273;
+}
+
+.mall-card__labels .labels__discount {
+  background: #e8303b;
+}
+
+.mall-card__labels .labels__hit {
+  background: #f9ac30;
+  border-radius: 7px;
 }
 
 .mall-labels__block {

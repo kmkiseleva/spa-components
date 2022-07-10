@@ -8,13 +8,18 @@ function App() {
       <MallProductCard
         title="Диван Лени Textile Rustic"
         articul="P94M-LJ4K"
-        labelNew={true}
+        labels={false}
+        labelsValues={[
+          { name: "new", value: "Новинка" },
+          { name: "discount", value: "50%" },
+          { name: "hit", value: "Хит" },
+        ]}
         actualPrice="17050"
         oldPrice={true}
         oldPriceValue="21990"
         available={true}
         availableCount="2"
-        cartButton="long"
+        cartButton="button"
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickCompareButton={() => console.log("Compare")}
         onClickCartButton={() => console.log("Add To Cart")}

@@ -9,13 +9,18 @@ import cart from "../../assets/icon-cart.svg";
 const MallProductCard: FC<IMallProductCard> = ({
   title = "Диван Лени Textile Rustic",
   articul = "P94M-LJ4K",
-  labelNew = true,
+  labels = true,
+  labelsValues = [
+    { name: "new", value: "Новинка" },
+    { name: "discount", value: "50%" },
+    { name: "hit", value: "Хит" },
+  ],
   actualPrice = "17050",
   oldPrice = true,
   oldPriceValue = "21990",
   available = true,
   availableCount = "2",
-  cartButton = "long",
+  cartButton = "button",
   onClickFavoritesButton = () => console.log("Favorites"),
   onClickCompareButton = () => console.log("Compare"),
   onClickCartButton = () => console.log("Add To Cart"),
@@ -29,7 +34,21 @@ const MallProductCard: FC<IMallProductCard> = ({
       onMouseOut={() => setActive(false)}
     >
       <div className="mall-card__labels">
-        {labelNew && <p>Новинка</p>}
+        {labelsValues.map((label, index) => (
+          <p
+            key={index}
+            className={
+              label.name === "new"
+                ? "labels__new"
+                : label.name === "discount"
+                ? "labels__discount"
+                : "labels__hit"
+            }
+          >
+            {label.value}
+          </p>
+        ))}
+
         {active && (
           <div className="mall-labels__block">
             <button onClick={onClickCompareButton}>
@@ -59,7 +78,7 @@ const MallProductCard: FC<IMallProductCard> = ({
         )}
       </div>
       <div className="mall-card__button">
-        {cartButton === "long" ? (
+        {cartButton === "button" ? (
           <button className="mall-button__long" onClick={onClickCartButton}>
             В корзину
           </button>
