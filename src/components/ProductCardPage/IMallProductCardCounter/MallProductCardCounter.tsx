@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import { IMallProductCardCounter } from "../IMallProductCardPage";
+import { IMallProductCardCounter } from "./IMallProductCardCounter";
 import "./MallProductCardCounter.css";
 
 const MallProductCardCounter: FC<IMallProductCardCounter> = ({
