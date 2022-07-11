@@ -1,8 +1,8 @@
-import "./MallProductCard.css";
 import img from "../../assets/test-img.jpg";
 import icon1 from "../../assets/icon-1.png";
 import icon2 from "../../assets/icon-2.png";
 import icon3 from "../../assets/icon-3.png";
+import "./MallProductCardPage.css";
 
 const MallProductCardGallery = () => {
   return (
