@@ -1,6 +1,6 @@
 import { SyntheticEvent } from 'react';
 
-export type Labels = {name: string; value: string};
+export type Labels = { name: string; value: string };
 export interface IMallProductCard {
   /**
    * Айдишник, нужен для внутренней работы конструктора
@@ -50,12 +50,12 @@ export interface IMallProductCard {
   /**
    * Старая цена значение
    */
-  oldPriceValue: string;
- 
+  oldPriceValue?: string;
+
   /**
    * Кнопка корзины (длинная / иконка)
    */
-  cartButton: "none" | "big" | "small";
+  cartButton: 'none' | 'big' | 'small';
 
   /**
    * Акцентный цвет
@@ -75,7 +75,12 @@ export interface IMallProductCard {
   /**
    * Второстепенный цвет текста
    */
-  textSecondaryColor?: string; 
+  textSecondaryColor?: string;
+
+  /**
+   * Внешние отступы
+   */
+  margin?: string;
 
   /**
    * Обработчик клика по кнопке Избранное

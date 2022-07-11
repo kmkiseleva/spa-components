@@ -1,7 +1,6 @@
 import React, { FC, useState } from "react";
-import "./MallProductCard.css";
 import { IMallProductCard } from "./IMallProductCard";
-import testImg from "../../assets/test-img.jpg";
+import "./MallProductCard.css";
 
 const MallProductCard: FC<IMallProductCard> = ({
   title = "Диван Лени Textile Rustic",
@@ -18,21 +17,25 @@ const MallProductCard: FC<IMallProductCard> = ({
   available = true,
   availableCount = "2",
   cartButton = "small",
-  accentColor = "#0364ED",
-  accentSecondaryColor = "#3BB273",
+  accentColor = "#0364ed",
+  accentSecondaryColor = "#3bb273",
   textMainColor = "#000000",
-  textSecondaryColor = "#8A8A8A",
-  onClickFavoritesButton = () => console.log("Favorites"),
-  onClickCompareButton = () => console.log("Compare"),
-  onClickCartButton = () => console.log("Add To Cart"),
+  textSecondaryColor = "#8a8a8a",
+  margin = "12px auto",
+  onClickFavoritesButton,
+  onClickCompareButton,
+  onClickCartButton,
 }) => {
   const [active, setActive] = useState(false);
 
   return (
     <div
       className="mall-card__block"
+      style={{ margin: margin }}
       onMouseOver={() => setActive(true)}
+      onFocus={() => setActive(true)}
       onMouseOut={() => setActive(false)}
+      onBlur={() => setActive(false)}
     >
       <div className="mall-card__labels">
         {labels &&
@@ -53,7 +56,7 @@ const MallProductCard: FC<IMallProductCard> = ({
 
         {active && (
           <div className="mall-labels__block">
-            <button onClick={onClickCompareButton}>
+            <button onClick={onClickCompareButton} title="Сравнить">
               <svg
                 width="19"
                 height="19"
@@ -65,7 +68,7 @@ const MallProductCard: FC<IMallProductCard> = ({
               </svg>
             </button>
 
-            <button onClick={onClickFavoritesButton}>
+            <button onClick={onClickFavoritesButton} title="Избранное">
               <svg
                 width="21"
                 height="19"
@@ -80,11 +83,7 @@ const MallProductCard: FC<IMallProductCard> = ({
         )}
       </div>
       <div className="mall-card__image">
-        {image ? (
-          <img src={image} alt="product" />
-        ) : (
-          <img src={testImg} alt="product" />
-        )}
+        <img src={image} alt="product" />
       </div>
       <h3 className="mall-card__title" style={{ color: textMainColor }}>
         {title}
@@ -103,12 +102,14 @@ const MallProductCard: FC<IMallProductCard> = ({
       )}
       <div className="mall-card__prices" style={{ color: textMainColor }}>
         <span>{actualPrice} &#8381;</span>
-        <span
-          className="mall-prices__old"
-          style={{ color: textSecondaryColor }}
-        >
-          {oldPriceValue} &#8381;
-        </span>
+        {oldPriceValue && (
+          <span
+            className="mall-prices__old"
+            style={{ color: textSecondaryColor }}
+          >
+            {oldPriceValue} &#8381;
+          </span>
+        )}
       </div>
       <div className="mall-card__button">
         {cartButton === "none" ? (
@@ -122,7 +123,11 @@ const MallProductCard: FC<IMallProductCard> = ({
             В корзину
           </button>
         ) : (
-          <button className="mall-button__icon" onClick={onClickCartButton}>
+          <button
+            className="mall-button__icon"
+            onClick={onClickCartButton}
+            title="В корзину"
+          >
             <svg
               width="46"
               height="46"

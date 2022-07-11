@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <MallProductCard
         title="Диван Лени Textile Rustic"
-        // image="https://mall-cms.storage.yandexcloud.net/common/images/2e65f9b9-7aa8-40bc-99f9-915ed72897b0.svg"
+        image="https://mall-cms.storage.yandexcloud.net/common/images/2e65f9b9-7aa8-40bc-99f9-915ed72897b0.svg"
         articul="P94M-LJ4K"
         labels={true}
         labelsValues={[
