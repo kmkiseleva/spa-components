@@ -1,4 +1,6 @@
 import React, { FC } from 'react';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import Link from 'next/link';
 import { IMallBreadcrumbs } from './IMallBreadcrumbs';
 import './MallBreadcrumbs.css';

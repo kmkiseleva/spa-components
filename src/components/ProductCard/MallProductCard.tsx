@@ -1,27 +1,27 @@
-import React, { FC, useState } from "react";
-import { IMallProductCard } from "./IMallProductCard";
-import "./MallProductCard.css";
+import React, { FC, useState } from 'react';
+import { IMallProductCard } from './IMallProductCard';
+import './MallProductCard.css';
 
 const MallProductCard: FC<IMallProductCard> = ({
-  title = "Диван Лени Textile Rustic",
-  articul = "P94M-LJ4K",
+  title = 'Диван Лени Textile Rustic',
+  articul = 'P94M-LJ4K',
   image,
   labels = true,
   labelsValues = [
-    { name: "new", value: "Новинка" },
-    { name: "discount", value: "50%" },
-    { name: "hit", value: "Хит" },
+    { name: 'new', value: 'Новинка' },
+    { name: 'discount', value: '50%' },
+    { name: 'hit', value: 'Хит' },
   ],
-  actualPrice = "17050",
-  oldPriceValue = "21990",
+  actualPrice = '17050',
+  oldPriceValue = '21990',
   available = true,
-  availableCount = "2",
-  cartButton = "small",
-  accentColor = "#0364ed",
-  accentSecondaryColor = "#3bb273",
-  textMainColor = "#000000",
-  textSecondaryColor = "#8a8a8a",
-  margin = "12px auto",
+  availableCount = '2',
+  cartButton = 'small',
+  accentColor = '#0364ed',
+  accentSecondaryColor = '#3bb273',
+  textMainColor = '#000000',
+  textSecondaryColor = '#8a8a8a',
+  margin = '12px auto',
   onClickFavoritesButton,
   onClickCompareButton,
   onClickCartButton,
@@ -43,11 +43,7 @@ const MallProductCard: FC<IMallProductCard> = ({
             <p
               key={index}
               className={
-                label.name === "new"
-                  ? "labels__new"
-                  : label.name === "discount"
-                  ? "labels__discount"
-                  : "labels__hit"
+                label.name === 'new' ? 'labels__new' : label.name === 'discount' ? 'labels__discount' : 'labels__hit'
               }
             >
               {label.value}
@@ -56,7 +52,10 @@ const MallProductCard: FC<IMallProductCard> = ({
 
         {active && (
           <div className="mall-labels__block">
-            <button onClick={onClickCompareButton} title="Сравнить">
+            <button
+              onClick={onClickCompareButton}
+              title="Сравнить"
+            >
               <svg
                 width="19"
                 height="19"
@@ -68,7 +67,10 @@ const MallProductCard: FC<IMallProductCard> = ({
               </svg>
             </button>
 
-            <button onClick={onClickFavoritesButton} title="Избранное">
+            <button
+              onClick={onClickFavoritesButton}
+              title="Избранное"
+            >
               <svg
                 width="21"
                 height="19"
@@ -83,12 +85,21 @@ const MallProductCard: FC<IMallProductCard> = ({
         )}
       </div>
       <div className="mall-card__image">
-        <img src={image} alt="product" />
+        <img
+          src={image}
+          alt="product"
+        />
       </div>
-      <h3 className="mall-card__title" style={{ color: textMainColor }}>
+      <h3
+        className="mall-card__title"
+        style={{ color: textMainColor }}
+      >
         {title}
       </h3>
-      <div className="mall-card__art" style={{ color: textSecondaryColor }}>
+      <div
+        className="mall-card__art"
+        style={{ color: textSecondaryColor }}
+      >
         Артикул {articul}
       </div>
       {available && (
@@ -96,11 +107,13 @@ const MallProductCard: FC<IMallProductCard> = ({
           className="mall-card__available"
           style={{ color: accentSecondaryColor }}
         >
-          В наличии{" "}
-          <span style={{ color: textSecondaryColor }}>{availableCount} шт</span>
+          В наличии <span style={{ color: textSecondaryColor }}>{availableCount} шт</span>
         </div>
       )}
-      <div className="mall-card__prices" style={{ color: textMainColor }}>
+      <div
+        className="mall-card__prices"
+        style={{ color: textMainColor }}
+      >
         <span>{actualPrice} &#8381;</span>
         {oldPriceValue && (
           <span
@@ -112,9 +125,9 @@ const MallProductCard: FC<IMallProductCard> = ({
         )}
       </div>
       <div className="mall-card__button">
-        {cartButton === "none" ? (
-          ""
-        ) : cartButton === "big" ? (
+        {cartButton === 'none' ? (
+          ''
+        ) : cartButton === 'big' ? (
           <button
             className="mall-button__long"
             style={{ color: accentColor, borderColor: accentColor }}
