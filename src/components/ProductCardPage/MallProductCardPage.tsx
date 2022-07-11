@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import MallProductCardHeader from "./MallProductCardHeader/MallProductCardHeader";
 import MallProductCardGallery from "./MallProductCardGallery/MallProductCardGallery";
+import MallProductCardLabel from "./MallProductCardLabel/MallProductCardLabel";
 import MallProductCardCounter from "./IMallProductCardCounter/MallProductCardCounter";
 import MallProductCardDescription from "./MallProductCardDescription/MallProductCardDescription";
 import { IMallProductCardPage } from "./IMallProductCardPage";
@@ -77,18 +78,7 @@ const MallProductCardPage: FC<IMallProductCardPage> = ({
           <div className="mall-details__labels-block">
             {labels &&
               labelsValues.map((label, index) => (
-                <p
-                  key={index}
-                  className={
-                    label.name === "new"
-                      ? "labels__new"
-                      : label.name === "discount"
-                      ? "labels__discount"
-                      : "labels__hit"
-                  }
-                >
-                  {label.value}
-                </p>
+                <MallProductCardLabel key={index} label={label} />
               ))}
           </div>
 
