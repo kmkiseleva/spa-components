@@ -1,0 +1,40 @@
+.mall-product-card__gallery {
+  display: flex;
+}
+
+.mall-small-images {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.mall-product-card__image {
+  width: 480px;
+  margin-right: 60px;
+}
+
+@media (max-width: 744px) {
+  .mall-product-card__gallery {
+    flex-wrap: wrap;
+  }
+
+  .mall-product-card__image {
+    order: 1;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .mall-product-card__image img {
+    display: block;
+    width: 288px;
+  }
+
+  .mall-small-images {
+    order: 2;
+    display: flex;
+    margin-bottom: 32px;
+  }
+
+  .mall-small-images img {
+    margin-right: 9px;
+  }
+}

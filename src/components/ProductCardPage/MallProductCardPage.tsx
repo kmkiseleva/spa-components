@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
-import MallProductCardHeader from "./MallProductCardHeader";
-import MallProductCardGallery from "./MallProductCardGallery";
-import MallProductCardDescription from "./MallProductCardDescription";
+import MallProductCardHeader from "./MallProductCardHeader/MallProductCardHeader";
+import MallProductCardGallery from "./MallProductCardGallery/MallProductCardGallery";
+import MallProductCardDescription from "./MallProductCardDescription/MallProductCardDescription";
 import { IMallProductCardPage } from "./IMallProductCardPage";
 import "./MallProductCardPage.css";
 

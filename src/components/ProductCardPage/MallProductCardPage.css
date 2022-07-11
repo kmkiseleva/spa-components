@@ -4,30 +4,10 @@ button {
   border: none;
 }
 
-.mall-product-card__title {
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 48px;
-}
-
 .mall-product-card {
   display: flex;
   padding: 48px 0px 0px;
   max-width: 1240px;
-}
-
-.mall-product-card__gallery {
-  display: flex;
-}
-
-.mall-small-images {
-  width: 100px;
-  margin-right: 20px;
-}
-
-.mall-product-card__image {
-  width: 480px;
-  margin-right: 60px;
 }
 
 .mall-details-top__buttons {
@@ -186,83 +166,6 @@ button {
   color: #ffffff;
 }
 
-.mall-product-card__footer {
-  width: 100%;
-}
-
-.mall-footer__buttons {
-  display: flex;
-  align-items: center;
-  margin-bottom: 33px;
-}
-
-.mall-footer__buttons button {
-  padding: 8px 0px;
-  width: 140px;
-  height: 40px;
-  border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 30px;
-}
-
-.mall-footer__buttons button img {
-  margin-right: 11px;
-}
-
-.button-disabled {
-  opacity: 0.5;
-}
-
-.description-active {
-  display: block;
-}
-
-.description-disabled {
-  display: none;
-}
-
-.mall-footer__description {
-  max-width: 1240px;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-  margin-bottom: 48px;
-}
-
-.mall-footer__description p {
-  max-width: 710px;
-  opacity: 0.8;
-}
-
-.table {
-  table-layout: fixed;
-  width: 100%;
-  margin-bottom: 20px;
-  border-spacing: 0;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-}
-
-.table td {
-  padding: 8px 16px;
-  text-align: left;
-}
-
-.table td:nth-child(odd) {
-  color: #8a8a8a;
-}
-
-.table tbody tr:nth-child(odd) {
-  background: #f5f5f6;
-}
-
-.table tbody tr:nth-child(even) {
-  background: #fff;
-}
-
 @media (max-width: 744px) {
   .mall-product-card__block {
     margin: 16px;
@@ -276,31 +179,6 @@ button {
   .mall-product-card {
     flex-wrap: wrap;
     padding-top: 0;
-  }
-
-  .mall-product-card__gallery {
-    flex-wrap: wrap;
-  }
-
-  .mall-product-card__image {
-    order: 1;
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .mall-product-card__image img {
-    display: block;
-    width: 288px;
-  }
-
-  .mall-small-images {
-    order: 2;
-    display: flex;
-    margin-bottom: 32px;
-  }
-
-  .mall-small-images img {
-    margin-right: 9px;
   }
 
   .mall-color__buttons {

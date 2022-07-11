@@ -1,0 +1,76 @@
+.mall-product-card__footer {
+  width: 100%;
+}
+
+.mall-footer__buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 33px;
+}
+
+.mall-footer__buttons button {
+  padding: 8px 0px;
+  width: 140px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.mall-footer__buttons button img {
+  margin-right: 11px;
+}
+
+.button-disabled {
+  opacity: 0.5;
+}
+
+.description-active {
+  display: block;
+}
+
+.description-disabled {
+  display: none;
+}
+
+.mall-footer__description {
+  max-width: 1240px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 48px;
+}
+
+.mall-footer__description p {
+  max-width: 710px;
+  opacity: 0.8;
+}
+
+.table {
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 20px;
+  border-spacing: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.table td {
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.table td:nth-child(odd) {
+  color: #8a8a8a;
+}
+
+.table tbody tr:nth-child(odd) {
+  background: #f5f5f6;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #fff;
+}
