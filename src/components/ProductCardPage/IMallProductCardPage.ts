@@ -6,6 +6,17 @@ export type ProductColors = {name: string; value: string};
 export type Description = {description: string};
 export type Characteristics = {name: string; value: string};
 
+export interface IMallProductCardCounter {
+  /**
+   * Акцентный цвет
+   */
+  accentColor?: string;
+  /**
+   * Обработчик клика по кнопке корзины
+   */
+  onClickCartButton: (value: number) => void;
+}
+
 export interface IMallProductCardDescription {
   /**
    * Описание карточки товара
