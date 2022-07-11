@@ -46,14 +46,20 @@ function App() {
         ]}
         actualPrice="17 050"
         oldPriceValue="21 990"
-        labelNew={true}
+        labels={true}
+        labelsValues={[
+          { name: "new", value: "Новинка" },
+          { name: "discount", value: "50%" },
+          { name: "hit", value: "Хит" },
+        ]}
         productSizes={["Большой", "Маленький", "Средний"]}
         productColors={[
           { name: "Красный", value: "red" },
           { name: "Крабовый", value: "pink" },
           { name: "Зеленый", value: "green" },
         ]}
-        available="2"
+        available={true}
+        availableCount="2"
         accentColor="#0364ed"
         accentSecondaryColor="#3bb273"
         textMainColor="#000000"

@@ -11,14 +11,20 @@ const MallProductCardPage: FC<IMallProductCardPage> = ({
   characteristics,
   actualPrice = "17 050",
   oldPriceValue = "21 990",
-  labelNew,
+  labels = true,
+  labelsValues = [
+    { name: "new", value: "Новинка" },
+    { name: "discount", value: "50%" },
+    { name: "hit", value: "Хит" },
+  ],
   productSizes = ["Большой", "Маленький", "Средний"],
   productColors = [
     { name: "Красный", value: "red" },
     { name: "Крабовый", value: "pink" },
     { name: "Зеленый", value: "green" },
   ],
-  available = "2",
+  available = true,
+  availableCount = "2",
   accentColor = "#0364ed",
   accentSecondaryColor = "#3bb273",
   textMainColor = "#000000",
@@ -79,7 +85,24 @@ const MallProductCardPage: FC<IMallProductCardPage> = ({
               Сравнить
             </button>
           </div>
-          {labelNew && <div className="mall-details__label">Новинка</div>}
+          <div className="mall-details__labels-block">
+            {labels &&
+              labelsValues.map((label, index) => (
+                <p
+                  key={index}
+                  className={
+                    label.name === "new"
+                      ? "labels__new"
+                      : label.name === "discount"
+                      ? "labels__discount"
+                      : "labels__hit"
+                  }
+                >
+                  {label.value}
+                </p>
+              ))}
+          </div>
+
           <div className="mall-details__size">
             <h3>Размер</h3>
             <div className="mall-size__buttons">
@@ -103,13 +126,17 @@ const MallProductCardPage: FC<IMallProductCardPage> = ({
                 </button>
               ))}
             </div>
-            <div
-              className="mall-available__label"
-              style={{ color: accentSecondaryColor }}
-            >
-              В наличии{" "}
-              <span style={{ color: textSecondaryColor }}>{available} шт</span>
-            </div>
+            {available && (
+              <div
+                className="mall-available__label"
+                style={{ color: accentSecondaryColor }}
+              >
+                В наличии
+                <span style={{ color: textSecondaryColor }}>
+                  {availableCount} шт
+                </span>
+              </div>
+            )}
             <div className="mall-prices">
               <span
                 className="mall-prices__actual"

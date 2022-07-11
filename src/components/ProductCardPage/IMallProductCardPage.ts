@@ -1,5 +1,6 @@
 import { SyntheticEvent } from 'react';
 
+export type Labels = { name: string; value: string };
 export type ProductHeader = {title: string};
 export type ProductColors = {name: string; value: string};
 export type Description = {description: string};
@@ -46,9 +47,14 @@ export interface IMallProductCardPage {
   oldPriceValue: string;
 
   /**
-   * Лейбл новинки  (on/off)
+   * Лейблы (on/off)
    */
-  labelNew: boolean;
+  labels: boolean;
+
+  /**
+   * Лейблы (значения)
+   */
+  labelsValues: Labels[];
 
   /**
    * Массив размеров товара
@@ -61,9 +67,14 @@ export interface IMallProductCardPage {
   productColors: ProductColors[];
 
   /**
+   * Количество товара в наличии (on/off)
+   */
+  available: boolean;
+
+  /**
    * Количество товара в наличии
    */
-  available: string;
+  availableCount: string;
 
   /**
    * Акцентный цвет
