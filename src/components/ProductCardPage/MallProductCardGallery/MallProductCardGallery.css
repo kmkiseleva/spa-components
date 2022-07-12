@@ -29,8 +29,8 @@
   }
 
   .mall-small-images {
-    order: 2;
     display: flex;
+    order: 2;
     margin-bottom: 32px;
   }
 

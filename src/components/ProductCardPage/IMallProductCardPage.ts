@@ -1,10 +1,10 @@
 import { SyntheticEvent } from 'react';
 
 export type Labels = { name: string; value: string };
-export type ProductHeader = {title: string};
-export type ProductColors = {name: string; value: string};
-export type Description = {description: string};
-export type Characteristics = {name: string; value: string};
+export type ProductHeader = { title: string };
+export type ProductColors = { name: string; value: string };
+export type Description = { description: string };
+export type Characteristics = { name: string; value: string };
 
 export interface IMallProductCardCounter {
   /**
@@ -22,9 +22,8 @@ export interface IMallProductCardDescription {
    * Описание карточки товара
    */
   description: string;
-  characteristics: Characteristics[]
+  characteristics: Characteristics[];
 }
-
 
 export interface IMallProductCardPage {
   /**
@@ -36,6 +35,14 @@ export interface IMallProductCardPage {
    * Название товара
    */
   title: string;
+
+  /**
+   * Изображения для галерии
+   */
+  icon1?: string;
+  icon2?: string;
+  icon3?: string;
+  img?: string;
 
   /**
    * Описание карточки товара
@@ -96,17 +103,17 @@ export interface IMallProductCardPage {
    * Акцентный дополнительный цвет
    */
   accentSecondaryColor?: string;
-   
+
   /**
    * Основной цвет текста
    */
   textMainColor?: string;
-   
+
   /**
    * Второстепенный цвет текста
    */
   textSecondaryColor?: string;
-   
+
   /**
    * Внешние отступы
    */

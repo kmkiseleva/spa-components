@@ -1,42 +1,46 @@
-import React, { FC } from "react";
-import MallProductCardHeader from "./MallProductCardHeader/MallProductCardHeader";
-import MallProductCardGallery from "./MallProductCardGallery/MallProductCardGallery";
-import MallProductCardLabel from "./MallProductCardLabel/MallProductCardLabel";
-import MallProductCardCounter from "./IMallProductCardCounter/MallProductCardCounter";
-import MallProductCardDescription from "./MallProductCardDescription/MallProductCardDescription";
-import { IMallProductCardPage } from "./IMallProductCardPage";
-import "./MallProductCardPage.css";
+import React, { FC } from 'react';
+import MallProductCardHeader from './MallProductCardHeader/MallProductCardHeader';
+import MallProductCardGallery from './MallProductCardGallery/MallProductCardGallery';
+import MallProductCardLabel from './MallProductCardLabel/MallProductCardLabel';
+import MallProductCardCounter from './IMallProductCardCounter/MallProductCardCounter';
+import MallProductCardDescription from './MallProductCardDescription/MallProductCardDescription';
+import { IMallProductCardPage } from './IMallProductCardPage';
+import './MallProductCardPage.css';
 
 const MallProductCardPage: FC<IMallProductCardPage> = ({
-  title = "Диван Лени Textile Rustic",
-  description = "Компактный диван «Каир» с универсальным углом гармонично впишется в любой современный или сдержанный классический интерьер. Эта модель представлена в практичной и износостойкой обивке из рогожки. Особенностью дивана является отсутствие подлокотников, что значительно увеличивает площадь посадочных мест, которых в данной модели предусмотрено три.",
+  title = 'Диван Лени Textile Rustic',
+  description = 'Компактный диван «Каир» с универсальным углом гармонично впишется в любой современный или сдержанный классический интерьер. Эта модель представлена в практичной и износостойкой обивке из рогожки. Особенностью дивана является отсутствие подлокотников, что значительно увеличивает площадь посадочных мест, которых в данной модели предусмотрено три.',
+  icon1,
+  icon2,
+  icon3,
+  img,
   characteristics,
-  actualPrice = "17 050",
-  oldPriceValue = "21 990",
+  actualPrice = '17 050',
+  oldPriceValue = '21 990',
   labels = true,
   labelsValues = [
-    { name: "new", value: "Новинка" },
-    { name: "discount", value: "50%" },
-    { name: "hit", value: "Хит" },
+    { name: 'new', value: 'Новинка' },
+    { name: 'discount', value: '50%' },
+    { name: 'hit', value: 'Хит' },
   ],
-  productSizes = ["Большой", "Маленький", "Средний"],
+  productSizes = ['Большой', 'Маленький', 'Средний'],
   productColors = [
-    { name: "Красный", value: "red" },
-    { name: "Крабовый", value: "pink" },
-    { name: "Зеленый", value: "green" },
+    { name: 'Красный', value: 'red' },
+    { name: 'Крабовый', value: 'pink' },
+    { name: 'Зеленый', value: 'green' },
   ],
   available = true,
-  availableCount = "2",
-  accentColor = "#0364ed",
-  accentSecondaryColor = "#3bb273",
-  textMainColor = "#000000",
-  textSecondaryColor = "#8a8a8a",
-  margin = "32px auto",
-  onClickFavoritesButton = () => console.log("Favorites"),
-  onClickCompareButton = () => console.log("Compare"),
-  onClickSizeButton = (value) => console.log(value),
-  onClickColorButton = (value) => console.log(value),
-  onClickCartButton = (value) => console.log(value),
+  availableCount = '2',
+  accentColor = '#0364ed',
+  accentSecondaryColor = '#3bb273',
+  textMainColor = '#000000',
+  textSecondaryColor = '#8a8a8a',
+  margin = '32px auto',
+  onClickFavoritesButton,
+  onClickCompareButton,
+  onClickSizeButton,
+  onClickColorButton,
+  onClickCartButton,
 }) => {
   return (
     <div
@@ -45,7 +49,12 @@ const MallProductCardPage: FC<IMallProductCardPage> = ({
     >
       <MallProductCardHeader title={title} />
       <div className="mall-product-card">
-        <MallProductCardGallery />
+        <MallProductCardGallery
+          icon1={icon1}
+          icon2={icon2}
+          icon3={icon3}
+          img={img}
+        />
 
         <div className="mall-product-card__details">
           <div className="mall-details-top__buttons">
@@ -78,7 +87,10 @@ const MallProductCardPage: FC<IMallProductCardPage> = ({
           <div className="mall-details__labels-block">
             {labels &&
               labelsValues.map((label, index) => (
-                <MallProductCardLabel key={index} label={label} />
+                <MallProductCardLabel
+                  key={index}
+                  label={label}
+                />
               ))}
           </div>
 
@@ -86,7 +98,10 @@ const MallProductCardPage: FC<IMallProductCardPage> = ({
             <h3>Размер</h3>
             <div className="mall-size__buttons">
               {productSizes.map((size, index) => (
-                <button key={index} onClick={() => onClickSizeButton(size)}>
+                <button
+                  key={index}
+                  onClick={() => onClickSizeButton(size)}
+                >
                   {size}
                 </button>
               ))}
@@ -112,9 +127,7 @@ const MallProductCardPage: FC<IMallProductCardPage> = ({
                 style={{ color: accentSecondaryColor }}
               >
                 В наличии
-                <span style={{ color: textSecondaryColor }}>
-                  {availableCount} шт
-                </span>
+                <span style={{ color: textSecondaryColor }}>{availableCount} шт</span>
               </div>
             )}
             <div className="mall-prices">

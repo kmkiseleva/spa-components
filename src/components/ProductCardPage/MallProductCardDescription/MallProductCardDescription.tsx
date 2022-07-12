@@ -1,20 +1,17 @@
-import React, { FC, useState } from "react";
-import { IMallProductCardDescription } from "./IMallProductCardDescription";
-import "./MallProductCardDescription.css";
+import React, { FC, useState } from 'react';
+import { IMallProductCardDescription } from './IMallProductCardDescription';
+import './MallProductCardDescription.css';
 
-const MallProductCardDescription: FC<IMallProductCardDescription> = ({
-  description,
-  characteristics,
-}) => {
-  const [active, setActive] = useState("description");
+const MallProductCardDescription: FC<IMallProductCardDescription> = ({ description, characteristics }) => {
+  const [active, setActive] = useState('description');
 
   return (
     <>
       <div className="mall-product-card__footer">
         <div className="mall-footer__buttons">
           <button
-            className={active === "description" ? "" : "button-disabled"}
-            onClick={() => setActive("description")}
+            className={active === 'description' ? '' : 'button-disabled'}
+            onClick={() => setActive('description')}
           >
             <svg
               width="18"
@@ -31,8 +28,8 @@ const MallProductCardDescription: FC<IMallProductCardDescription> = ({
             Описание товара
           </button>
           <button
-            className={active === "chars" ? "" : "button-disabled"}
-            onClick={() => setActive("chars")}
+            className={active === 'chars' ? '' : 'button-disabled'}
+            onClick={() => setActive('chars')}
           >
             <svg
               width="20"
@@ -50,18 +47,8 @@ const MallProductCardDescription: FC<IMallProductCardDescription> = ({
           </button>
         </div>
         <div className="mall-footer__description">
-          <p
-            className={
-              active === "description"
-                ? "description-active"
-                : "description-disabled"
-            }
-          >
-            {description}
-          </p>
-          <div
-            className={active === "description" ? "description-disabled" : ""}
-          >
+          <p className={active === 'description' ? 'description-active' : 'description-disabled'}>{description}</p>
+          <div className={active === 'description' ? 'description-disabled' : ''}>
             <table className="table">
               <tbody>
                 {characteristics.map((item, index) => (

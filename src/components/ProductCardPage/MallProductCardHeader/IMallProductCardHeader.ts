@@ -1,1 +1,1 @@
-export type ProductHeader = {title: string};
+export type ProductHeader = { title: string };

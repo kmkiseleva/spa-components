@@ -1,10 +1,9 @@
-export type Characteristics = {name: string; value: string};
-
+export type Characteristics = { name: string; value: string };
 
 export interface IMallProductCardDescription {
   /**
    * Описание карточки товара
    */
   description: string;
-  characteristics: Characteristics[]
+  characteristics: Characteristics[];
 }
