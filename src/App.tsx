@@ -10,19 +10,14 @@ function App() {
         title="Диван Лени Textile Rustic"
         image="https://mall-cms.storage.yandexcloud.net/common/images/2e65f9b9-7aa8-40bc-99f9-915ed72897b0.svg"
         articul="P94M-LJ4K"
-        labels={true}
-        labelsValues={[
-          { name: "new", value: "Новинка" },
-          { name: "discount", value: "50%" },
-          { name: "hit", value: "Хит" },
-        ]}
+        currentColor={{ name: "Красный", value: "red" }}
+        currentSize="Большой"
         actualPrice="17050"
         oldPriceValue="21990"
-        available={true}
+        showEconomy={true}
         availableCount="2"
-        cartButton="small"
         accentColor="#0364ED"
-        accentSecondaryColor="#3BB273"
+        accentSecondaryColor="#fbcd56"
         textMainColor="#000000"
         textSecondaryColor="#8A8A8A"
         onClickFavoritesButton={() => console.log("Favorites")}

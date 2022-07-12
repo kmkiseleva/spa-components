@@ -1,6 +1,4 @@
 import { SyntheticEvent } from 'react';
-
-export type Labels = { name: string; value: string };
 export interface IMallProductCardLong {
   /**
    * Айдишник, нужен для внутренней работы конструктора
@@ -23,19 +21,14 @@ export interface IMallProductCardLong {
   articul: string;
 
   /**
-   * Лейблы (on/off)
+   * Текущий цвет товара
    */
-  labels: boolean;
+  currentColor: { name: string; value: string };
 
   /**
-   * Лейблы (значения)
+   * Текущий размер товара
    */
-  labelsValues: Labels[];
-
-  /**
-   * Количество товара в наличии (on/off)
-   */
-  available: boolean;
+  currentSize: string;
 
   /**
    * Количество товара в наличии
@@ -53,9 +46,9 @@ export interface IMallProductCardLong {
   oldPriceValue?: string;
 
   /**
-   * Кнопка корзины (длинная / иконка)
+   * Показать / скрыть экономию
    */
-  cartButton: 'none' | 'big' | 'small';
+  showEconomy: boolean;
 
   /**
    * Акцентный цвет
@@ -95,5 +88,5 @@ export interface IMallProductCardLong {
   /**
    * Обработчик клика по кнопке корзины
    */
-  onClickCartButton: (evt?: SyntheticEvent) => void;
+   onClickCartButton: (value: number) => void;
 }

@@ -1,4 +1,5 @@
 import React, { FC, useState } from "react";
+import MallProductCardCounter from "./../ProductCardPage/IMallProductCardCounter/MallProductCardCounter";
 import { IMallProductCardLong } from "./IMallProductCardLong";
 import "./MallProductCardLong.css";
 
@@ -8,19 +9,14 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
   title = "Диван Лени Textile Rustic",
   articul = "P94M-LJ4K",
   image,
-  labels = true,
-  labelsValues = [
-    { name: "new", value: "Новинка" },
-    { name: "discount", value: "50%" },
-    { name: "hit", value: "Хит" },
-  ],
+  currentColor = { name: "Красный", value: "red" },
+  currentSize = "Большой",
   actualPrice = "17050",
   oldPriceValue = "21990",
-  available = true,
+  showEconomy = true,
   availableCount = "2",
-  cartButton = "small",
   accentColor = "#0364ed",
-  accentSecondaryColor = "#3bb273",
+  accentSecondaryColor = "#fbcd56",
   textMainColor = "#000000",
   textSecondaryColor = "#8a8a8a",
   margin = "50px auto",
@@ -29,6 +25,7 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
   onClickCartButton,
 }) => {
   const [active, setActive] = useState(true);
+  const economy = Number(oldPriceValue) - Number(actualPrice);
 
   return (
     <div
@@ -53,7 +50,14 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
         >
           Артикул {articul}
         </div>
-        <div className="mall-card-long__chars">f</div>
+        <div className="mall-card-long__chars">
+          <div className="mall-card-long__color">
+            <span style={{ backgroundColor: currentColor.value }}></span>{" "}
+            {currentColor.name}
+          </div>
+          <div className="mall-card-long__size">{currentSize}</div>
+        </div>
+
         {active && (
           <div className="mall-card-long__on-off-block">
             <button
@@ -97,7 +101,7 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
           </div>
         )}
       </div>
-      
+
       <div className="mall-card-long__third-block">
         <div
           className="mall-card-long__prices"
@@ -111,6 +115,28 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
             >
               {oldPriceValue} &#8381;
             </span>
+          )}
+        </div>
+        {showEconomy && (
+          <div
+            className="mall-card-long__economy"
+            style={{ color: textSecondaryColor }}
+          >
+            Экономия
+            <span style={{ background: accentSecondaryColor }}>
+              {economy} &#8381;
+            </span>
+          </div>
+        )}
+        <div className="mall-card-long__counter-block">
+          {availableCount === "1" ? (
+            <span>1 штука</span>
+          ) : (
+            <MallProductCardCounter
+              accentColor={accentColor}
+              onClickCartButton={onClickCartButton}
+              showCartButton={false}
+            />
           )}
         </div>
       </div>

@@ -147,6 +147,7 @@ const MallProductCardPage: FC<IMallProductCardPage> = ({
           <MallProductCardCounter
             accentColor={accentColor}
             onClickCartButton={onClickCartButton}
+            showCartButton={true}
           />
         </div>
       </div>
