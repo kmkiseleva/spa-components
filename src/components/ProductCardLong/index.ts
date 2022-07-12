@@ -1,1 +1,1 @@
-export { default } from './MallProductCard';
+export { default } from './MallProductCardLong';

@@ -1,10 +1,34 @@
 import "./App.css";
 // import MallProductCard from "./components/ProductCard/MallProductCard";
-import MallProductCardPage from "./components/ProductCardPage/MallProductCardPage";
+// import MallProductCardPage from "./components/ProductCardPage/MallProductCardPage";
+import MallProductCardLong from "./components/ProductCardLong/MallProductCardLong";
 
 function App() {
   return (
     <div className="App">
+      <MallProductCardLong
+        title="Диван Лени Textile Rustic"
+        image="https://mall-cms.storage.yandexcloud.net/common/images/2e65f9b9-7aa8-40bc-99f9-915ed72897b0.svg"
+        articul="P94M-LJ4K"
+        labels={true}
+        labelsValues={[
+          { name: "new", value: "Новинка" },
+          { name: "discount", value: "50%" },
+          { name: "hit", value: "Хит" },
+        ]}
+        actualPrice="17050"
+        oldPriceValue="21990"
+        available={true}
+        availableCount="2"
+        cartButton="small"
+        accentColor="#0364ED"
+        accentSecondaryColor="#3BB273"
+        textMainColor="#000000"
+        textSecondaryColor="#8A8A8A"
+        onClickFavoritesButton={() => console.log("Favorites")}
+        onClickDeleteButton={() => console.log("Delete")}
+        onClickCartButton={() => console.log("Add To Cart")}
+      />
       {/* <MallProductCard
         title="Диван Лени Textile Rustic"
         image="https://mall-cms.storage.yandexcloud.net/common/images/2e65f9b9-7aa8-40bc-99f9-915ed72897b0.svg"
@@ -29,7 +53,7 @@ function App() {
         onClickCartButton={() => console.log("Add To Cart")}
       /> */}
 
-      <MallProductCardPage
+      {/* <MallProductCardPage
         title="Диван Лени Textile Rustic"
         description="Компактный диван «Каир» с универсальным углом гармонично впишется в
             любой современный или сдержанный классический интерьер. Эта модель
@@ -70,7 +94,7 @@ function App() {
         onClickSizeButton={(value) => console.log(value)}
         onClickColorButton={(value) => console.log(value)}
         onClickCartButton={(value) => console.log(value)}
-      />
+      /> */}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { SyntheticEvent } from 'react';
 
 export type Labels = { name: string; value: string };
-export interface IMallProductCard {
+export interface IMallProductCardLong {
   /**
    * Айдишник, нужен для внутренней работы конструктора
    */
@@ -90,7 +90,7 @@ export interface IMallProductCard {
   /**
    * Обработчик клика по кнопке Сравнить
    */
-  onClickCompareButton?: (evt?: SyntheticEvent) => void;
+   onClickDeleteButton?: (evt?: SyntheticEvent) => void;
 
   /**
    * Обработчик клика по кнопке корзины
