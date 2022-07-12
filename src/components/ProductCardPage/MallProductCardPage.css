@@ -36,33 +36,6 @@ button {
   width: 100%;
 }
 
-.mall-details__labels-block p {
-  width: 71px;
-  height: 20px;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  color: #ffffff;
-  border-radius: 2px;
-  margin-top: 0;
-  margin-right: 10px;
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-.mall-details__labels-block .labels__new {
-  background: #3bb273;
-}
-
-.mall-details__labels-block .labels__discount {
-  background: #e8303b;
-}
-
-.mall-details__labels-block .labels__hit {
-  background: #f9ac30;
-  border-radius: 7px;
-}
-
 .mall-details__size h3,
 .mall-details__color h3 {
   font-weight: 400;

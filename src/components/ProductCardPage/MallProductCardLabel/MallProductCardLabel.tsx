@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { IMallProductCardLabel } from "./IMallProductCardLabel";
 import "./MallProductCardLabel.css";
 
