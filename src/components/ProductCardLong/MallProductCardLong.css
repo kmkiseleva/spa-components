@@ -121,5 +121,54 @@ button {
 }
 
 @media (max-width: 744px) {
-  
+  .mall-cart__block {
+    margin-bottom: 0;
+  }
+
+  .mall-card-long__block {
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+
+  .mall-card-long__image {
+    width: 30%;
+  }
+
+  .mall-card-long__middle {
+    width: 30%;
+  }
+
+  .mall-card-long__third-block {
+    margin-top: 20px;
+    width: 40%;
+  }
+
+  .mall-card-long__prices {
+    margin-right: 10px;
+  }
+
+  .mall-card-long__economy {
+    margin-left: -110px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mall-card-long__image {
+    width: 48%;
+  }
+
+  .mall-card-long__middle {
+    width: 48%;
+  }
+
+  .mall-card-long__third-block {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .mall-card-long__economy {
+    margin-left: -100px;
+    margin-bottom: 20px;
+  }
 }
