@@ -106,6 +106,11 @@ export interface IMallProductCardLong {
   background?: string;
 
   /**
+   * Показать / скрыть кнопку корзины
+   */
+  showCartButton?: boolean;
+
+  /**
    * Обработчик клика по кнопке Избранное
    */
   onClickFavoritesButton?: (evt?: SyntheticEvent) => void;

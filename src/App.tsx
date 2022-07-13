@@ -14,11 +14,11 @@ function App() {
         currentColor={{ name: "Красный", value: "red" }}
         currentSize="Большой"
         actualPrice="17050"
-        oldPrice={false}
+        oldPrice={true}
         oldPriceValue="21990"
         showEconomy={true}
         availableCount="2"
-        accentColor="#0364ED"
+        accentColor="#0364ed"
         accentSecondaryColor="#fbcd56"
         textMainColor="#000000"
         textSecondaryColor="#8a8a8a"
@@ -26,6 +26,7 @@ function App() {
         borderColor="#e9e9e9"
         borderRadius="8px"
         background="#ffffff"
+        showCartButton={false}
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickDeleteButton={() => console.log("Delete")}
         onClickCartButton={() => console.log("Add To Cart")}

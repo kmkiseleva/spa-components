@@ -24,6 +24,7 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
   borderColor = "#e9e9e9",
   borderRadius = "8px",
   background = "#ffffff",
+  showCartButton = false,
   onClickFavoritesButton,
   onClickDeleteButton,
   onClickCartButton,
@@ -147,7 +148,7 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
             <MallProductCardCounter
               accentColor={accentColor}
               onClickCartButton={onClickCartButton}
-              showCartButton={false}
+              showCartButton={showCartButton}
             />
           )}
         </div>
