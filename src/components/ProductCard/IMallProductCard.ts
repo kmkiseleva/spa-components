@@ -83,6 +83,11 @@ export interface IMallProductCard {
   margin?: string;
 
   /**
+   * Внешние отступы
+   */
+  padding?: string;
+
+  /**
    * Обработчик клика по кнопке Избранное
    */
   onClickFavoritesButton?: (evt?: SyntheticEvent) => void;

@@ -1,14 +1,14 @@
 import "./App.css";
-// import MallProductCard from "./components/ProductCard/MallProductCard";
+import MallProductCard from "./components/ProductCard/MallProductCard";
 // import MallProductCardPage from "./components/ProductCardPage/MallProductCardPage";
-import MallProductCardLong from "./components/ProductCardLong/MallProductCardLong";
+// import MallProductCardLong from "./components/ProductCardLong/MallProductCardLong";
 
 function App() {
   return (
     <div className="App">
-      <MallProductCardLong
-        title="Диван Лени Textile Rustic"
-        showImage={false}
+      {/* <MallProductCardLong
+        cardTitle="Диван Лени Textile Rustic"
+        showImage={true}
         image="https://mall-cms.storage.yandexcloud.net/common/images/2e65f9b9-7aa8-40bc-99f9-915ed72897b0.svg"
         articul="P94M-LJ4K"
         currentColor={{ name: "Красный", value: "red" }}
@@ -29,10 +29,10 @@ function App() {
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickDeleteButton={() => console.log("Delete")}
         onClickCartButton={() => console.log("Add To Cart")}
-      />
+      /> */}
 
-      {/* <MallProductCard
-        title="Диван Лени Textile Rustic"
+      <MallProductCard
+        cardTitle="Диван Лени Textile Rustic"
         image="https://mall-cms.storage.yandexcloud.net/common/images/2e65f9b9-7aa8-40bc-99f9-915ed72897b0.svg"
         articul="P94M-LJ4K"
         labels={true}
@@ -53,7 +53,7 @@ function App() {
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickCompareButton={() => console.log("Compare")}
         onClickCartButton={() => console.log("Add To Cart")}
-      /> */}
+      />
 
       {/* <MallProductCardPage
         title="Диван Лени Textile Rustic"
