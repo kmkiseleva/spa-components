@@ -11,6 +11,11 @@ export interface IMallProductCardLong {
   title: string;
 
   /**
+   * Показать / скрыть изображение товара
+   */
+  showImage: boolean;
+
+  /**
    * Изображение товара
    */
   image?: string;
@@ -39,6 +44,11 @@ export interface IMallProductCardLong {
    * Актуальная цена товара
    */
   actualPrice: string;
+
+  /**
+   * Показать / скрыть старую цену
+   */
+  oldPrice: boolean;
 
   /**
    * Старая цена значение
@@ -74,6 +84,26 @@ export interface IMallProductCardLong {
    * Внешние отступы
    */
   margin?: string;
+
+  /**
+   * Толщина обводки карточки
+   */
+  borderWidth?: string;
+
+  /**
+   * Цвет обводки карточки
+   */
+  borderColor?: string;
+
+  /**
+   * Закругление углов карточки
+   */
+  borderRadius?: string;
+
+  /**
+   * Фон карточки
+   */
+  background?: string;
 
   /**
    * Обработчик клика по кнопке Избранное

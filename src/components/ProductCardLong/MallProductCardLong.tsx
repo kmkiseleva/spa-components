@@ -1,23 +1,29 @@
-import React, { FC, useState } from 'react';
-import MallProductCardCounter from '../ProductCardCounter/MallProductCardCounter';
-import { IMallProductCardLong } from './IMallProductCardLong';
-import './MallProductCardLong.css';
+import React, { FC, useState } from "react";
+import MallProductCardCounter from "../ProductCardCounter/MallProductCardCounter";
+import { IMallProductCardLong } from "./IMallProductCardLong";
+import "./MallProductCardLong.css";
 
 const MallProductCardLong: FC<IMallProductCardLong> = ({
-  title = 'Диван Лени Textile Rustic',
-  articul = 'P94M-LJ4K',
+  title = "Диван Лени Textile Rustic",
+  articul = "P94M-LJ4K",
+  showImage = true,
   image,
-  currentColor = { name: 'Красный', value: 'red' },
-  currentSize = 'Большой',
-  actualPrice = '17050',
-  oldPriceValue = '21990',
+  currentColor = { name: "Красный", value: "red" },
+  currentSize = "Большой",
+  actualPrice = "17050",
+  oldPrice = true,
+  oldPriceValue = "21990",
   showEconomy = true,
-  availableCount = '2',
-  accentColor = '#0364ed',
-  accentSecondaryColor = '#fbcd56',
-  textMainColor = '#000000',
-  textSecondaryColor = '#8a8a8a',
-  margin = '50px auto',
+  availableCount = "2",
+  accentColor = "#0364ed",
+  accentSecondaryColor = "#fbcd56",
+  textMainColor = "#000000",
+  textSecondaryColor = "#8a8a8a",
+  margin = "50px auto",
+  borderWidth = "1px",
+  borderColor = "#e9e9e9",
+  borderRadius = "8px",
+  background = "#ffffff",
   onClickFavoritesButton,
   onClickDeleteButton,
   onClickCartButton,
@@ -28,24 +34,26 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
   return (
     <div
       className="mall-card-long__block"
-      style={{ margin: margin }}
+      style={{
+        margin: margin,
+        borderWidth: borderWidth,
+        borderColor: borderColor,
+        borderRadius: borderRadius,
+        background: background,
+      }}
       onMouseOver={() => setActive(true)}
       onFocus={() => setActive(true)}
       onMouseOut={() => setActive(false)}
       onBlur={() => setActive(false)}
     >
-      <div className="mall-card-long__image">
-        <img
-          src={image}
-          alt="product"
-        />
-      </div>
+      {showImage && (
+        <div className="mall-card-long__image">
+          <img src={image} alt="product" />
+        </div>
+      )}
 
       <div className="mall-card-long__middle">
-        <h3
-          className="mall-card-long__title"
-          style={{ color: textMainColor }}
-        >
+        <h3 className="mall-card-long__title" style={{ color: textMainColor }}>
           {title}
         </h3>
         <div
@@ -56,7 +64,8 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
         </div>
         <div className="mall-card-long__chars">
           <div className="mall-card-long__color">
-            <span style={{ backgroundColor: currentColor.value }}></span> {currentColor.name}
+            <span style={{ backgroundColor: currentColor.value }}></span>{" "}
+            {currentColor.name}
           </div>
           <div className="mall-card-long__size">{currentSize}</div>
         </div>
@@ -111,7 +120,7 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
           style={{ color: textMainColor }}
         >
           <span>{actualPrice} &#8381;</span>
-          {oldPriceValue && (
+          {oldPrice && (
             <span
               className="mall-prices-long__old"
               style={{ color: textSecondaryColor }}
@@ -126,11 +135,13 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
             style={{ color: textSecondaryColor }}
           >
             Экономия
-            <span style={{ background: accentSecondaryColor }}>{economy} &#8381;</span>
+            <span style={{ background: accentSecondaryColor }}>
+              {economy} &#8381;
+            </span>
           </div>
         )}
         <div className="mall-card-long__counter-block">
-          {availableCount === '1' ? (
+          {availableCount === "1" ? (
             <span>1 штука</span>
           ) : (
             <MallProductCardCounter
