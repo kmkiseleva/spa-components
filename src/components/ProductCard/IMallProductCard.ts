@@ -10,7 +10,7 @@ export interface IMallProductCard {
   /**
    * Название товара
    */
-  title: string;
+  cardTitle: string;
 
   /**
    * Изображение товара

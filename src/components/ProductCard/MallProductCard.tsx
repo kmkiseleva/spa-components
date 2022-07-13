@@ -3,7 +3,7 @@ import { IMallProductCard } from './IMallProductCard';
 import './MallProductCard.css';
 
 const MallProductCard: FC<IMallProductCard> = ({
-  title = 'Диван Лени Textile Rustic',
+  cardTitle = 'Диван Лени Textile Rustic',
   articul = 'P94M-LJ4K',
   image,
   labels = true,
@@ -94,7 +94,7 @@ const MallProductCard: FC<IMallProductCard> = ({
         className="mall-card__title"
         style={{ color: textMainColor }}
       >
-        {title}
+        {cardTitle}
       </h3>
       <div
         className="mall-card__art"

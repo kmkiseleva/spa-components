@@ -8,7 +8,7 @@ export interface IMallProductCardLong {
   /**
    * Название товара
    */
-  title: string;
+  cardTitle: string;
 
   /**
    * Показать / скрыть изображение товара

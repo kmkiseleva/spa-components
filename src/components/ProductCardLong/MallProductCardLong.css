@@ -8,8 +8,8 @@ button {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
   max-width: 789px;
   padding: 24px;
   border-style: solid;
@@ -127,9 +127,9 @@ button {
 
 @media (max-width: 520px) {
   .mall-card-long__block {
-    max-width: 310px;
     grid-template-columns: 1fr;
     justify-items: center;
+    max-width: 310px;
   }
 
   .mall-card-long__middle,
@@ -139,8 +139,8 @@ button {
   }
 
   .mall-card-long__prices {
-    font-size: 24px;
     margin-bottom: 15px;
+    font-size: 24px;
   }
 }
 

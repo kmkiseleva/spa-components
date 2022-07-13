@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <MallProductCardLong
         title="Диван Лени Textile Rustic"
-        showImage={true}
+        showImage={false}
         image="https://mall-cms.storage.yandexcloud.net/common/images/2e65f9b9-7aa8-40bc-99f9-915ed72897b0.svg"
         articul="P94M-LJ4K"
         currentColor={{ name: "Красный", value: "red" }}
