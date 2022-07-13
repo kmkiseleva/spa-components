@@ -26,7 +26,6 @@ function App() {
         borderColor="#e9e9e9"
         borderRadius="8px"
         background="#ffffff"
-        showCartButton={false}
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickDeleteButton={() => console.log("Delete")}
         onClickCartButton={() => console.log("Add To Cart")}
