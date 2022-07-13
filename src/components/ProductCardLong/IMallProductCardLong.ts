@@ -83,10 +83,10 @@ export interface IMallProductCardLong {
   /**
    * Обработчик клика по кнопке Сравнить
    */
-   onClickDeleteButton?: (evt?: SyntheticEvent) => void;
+  onClickDeleteButton?: (evt?: SyntheticEvent) => void;
 
   /**
    * Обработчик клика по кнопке корзины
    */
-   onClickCartButton: (value: number) => void;
+  onClickCartButton: (value: number) => void;
 }

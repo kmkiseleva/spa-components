@@ -24,7 +24,7 @@
 }
 
 .mall-cart__button {
-  width: 132px;
+  min-width: 132px;
   height: 40px;
   padding: 8px 16px;
   margin-left: 14px;

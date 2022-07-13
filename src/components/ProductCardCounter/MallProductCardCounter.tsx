@@ -1,12 +1,8 @@
-import React, { FC, useState } from "react";
-import { IMallProductCardCounter } from "./IMallProductCardCounter";
-import "./MallProductCardCounter.css";
+import React, { FC, useState } from 'react';
+import { IMallProductCardCounter } from './IMallProductCardCounter';
+import './MallProductCardCounter.css';
 
-const MallProductCardCounter: FC<IMallProductCardCounter> = ({
-  accentColor,
-  onClickCartButton,
-  showCartButton,
-}) => {
+const MallProductCardCounter: FC<IMallProductCardCounter> = ({ accentColor, onClickCartButton, showCartButton }) => {
   const [value, setValue] = useState(1);
 
   const decrementHandler = (val: number) => {
@@ -33,14 +29,17 @@ const MallProductCardCounter: FC<IMallProductCardCounter> = ({
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0 0H14V2H0V0Z" fill="black" />
+          <path
+            d="M0 0H14V2H0V0Z"
+            fill="black"
+          />
         </svg>
       </button>
       <input
         className="mall-cart__input"
         type="text"
         value={value}
-        onChange={(e) => setValue(Number(e.target.value))}
+        onChange={(event) => setValue(Number(event.target.value))}
       />
       <button
         className="mall-cart__counter"
@@ -53,7 +52,10 @@ const MallProductCardCounter: FC<IMallProductCardCounter> = ({
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M6 6V0H8V6H14V8H8V14H6V8H0V6H6Z" fill="black" />
+          <path
+            d="M6 6V0H8V6H14V8H8V14H6V8H0V6H6Z"
+            fill="black"
+          />
         </svg>
       </button>
       {showCartButton && (

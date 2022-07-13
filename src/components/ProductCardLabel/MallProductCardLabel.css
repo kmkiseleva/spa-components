@@ -1,5 +1,5 @@
 .mall-details__labels-block p {
-  width: 71px;
+  min-width: 71px;
   height: 20px;
   margin-top: 0;
   margin-right: 10px;

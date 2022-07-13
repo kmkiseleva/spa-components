@@ -1,3 +1,4 @@
+export type CardDescriptionType = 'description' | 'chars';
 export type Characteristics = { name: string; value: string };
 
 export interface IMallProductCardDescription {

@@ -1,9 +1,9 @@
 import React, { FC, useState } from 'react';
-import { IMallProductCardDescription } from './IMallProductCardDescription';
+import { IMallProductCardDescription, CardDescriptionType } from './IMallProductCardDescription';
 import './MallProductCardDescription.css';
 
 const MallProductCardDescription: FC<IMallProductCardDescription> = ({ description, characteristics }) => {
-  const [active, setActive] = useState('description');
+  const [active, setActive] = useState<CardDescriptionType>('description');
 
   return (
     <>

@@ -7,7 +7,7 @@ export interface IMallProductCardCounter {
   /**
    * Показывать / скрывать кнопку корзины (on / off)
    */
-   showCartButton: boolean;
+  showCartButton: boolean;
   /**
    * Обработчик клика по кнопке корзины
    */
