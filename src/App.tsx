@@ -14,17 +14,17 @@ import img7 from "./assets/test-img.jpg";
 function App() {
   return (
     <div className="App">
-      <MallProductCardLong
+      {/* <MallProductCardLong
         cardTitle="Диван Лени Textile Rustic"
         showImage={true}
-        image={img5}
+        image={img7}
         // image="https://mall-cms.storage.yandexcloud.net/common/images/2e65f9b9-7aa8-40bc-99f9-915ed72897b0.svg"
         articul="P94M-LJ4K"
         currentColor={{ name: "Красный", value: "red" }}
         currentSize="Большой"
-        actualPrice="17050000"
+        actualPrice="17050"
         oldPrice={true}
-        oldPriceValue="21990000"
+        oldPriceValue="21990"
         showEconomy={true}
         availableCount="2"
         accentColor="#0364ed"
@@ -38,7 +38,7 @@ function App() {
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickDeleteButton={() => console.log("Delete")}
         onClickCartButton={() => console.log("Add To Cart")}
-      />
+      /> */}
 
       {/* <MallProductCard
         cardTitle="Диван Лени Textile Rustic"
@@ -64,7 +64,7 @@ function App() {
         onClickCartButton={() => console.log("Add To Cart")}
       /> */}
 
-      {/* <MallProductCardPage
+      <MallProductCardPage
         title="Диван Лени Textile Rustic"
         description="Компактный диван «Каир» с универсальным углом гармонично впишется в
             любой современный или сдержанный классический интерьер. Эта модель
@@ -99,13 +99,13 @@ function App() {
         accentSecondaryColor="#3bb273"
         textMainColor="#000000"
         textSecondaryColor="#8a8a8a"
-        margin="32px"
+        margin="16px"
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickCompareButton={() => console.log("Compare")}
         onClickSizeButton={(value) => console.log(value)}
         onClickColorButton={(value) => console.log(value)}
         onClickCartButton={(value) => console.log(value)}
-      /> */}
+      />
     </div>
   );
 }
