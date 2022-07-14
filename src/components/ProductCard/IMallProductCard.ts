@@ -83,7 +83,7 @@ export interface IMallProductCard {
   margin?: string;
 
   /**
-   * Внешние отступы
+   * Внутренние отступы
    */
   padding?: string;
 
