@@ -78,3 +78,13 @@
 .table tbody tr:nth-child(even) {
   background: #fff;
 }
+
+@media (max-width: 744px) {
+  .mall-footer__buttons {
+    justify-content: flex-start;
+  }
+
+  .mall-footer__buttons button {
+    margin-right: 26px;
+  }
+}

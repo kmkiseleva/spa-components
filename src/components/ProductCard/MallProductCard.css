@@ -20,6 +20,7 @@ button {
   display: flex;
   align-items: center;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .mall-card__labels p {
@@ -61,6 +62,9 @@ button {
 .mall-card__image img {
   display: block;
   width: 216px;
+  height: 216px;
+  object-fit: contain;
+  margin-bottom: 20px;
 }
 
 .mall-card__title {

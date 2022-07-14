@@ -15,10 +15,17 @@ button {
   border-style: solid;
 }
 
+.mall-card-long__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .mall-card-long__image img {
   display: block;
-  min-width: 112px;
-  max-width: 144px;
+  width: 144px;
+  height: 144px;
+  object-fit: contain;
 }
 
 .mall-card-long__title {
@@ -132,6 +139,11 @@ button {
     max-width: 310px;
   }
 
+  .mall-card-long__image img {
+    width: 200px;
+    height: 200px;
+  }
+
   .mall-card-long__middle,
   .mall-card-long__third-block {
     justify-items: center;
@@ -141,6 +153,10 @@ button {
   .mall-card-long__prices {
     margin-bottom: 15px;
     font-size: 24px;
+  }
+
+  .mall-card-long__counter-block {
+    justify-content: center;
   }
 }
 

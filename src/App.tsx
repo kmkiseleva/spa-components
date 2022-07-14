@@ -1,15 +1,19 @@
 import "./App.css";
-// import MallProductCard from "./components/ProductCard/MallProductCard";
-// import MallProductCardPage from "./components/ProductCardPage/MallProductCardPage";
+import MallProductCard from "./components/ProductCard/MallProductCard";
+import MallProductCardPage from "./components/ProductCardPage/MallProductCardPage";
 import MallProductCardLong from "./components/ProductCardLong/MallProductCardLong";
+
+import img from "./assets/img.jpg";
+import img2 from "./assets/img-2.jpg";
 
 function App() {
   return (
     <div className="App">
-      <MallProductCardLong
+      {/* <MallProductCardLong
         cardTitle="Диван Лени Textile Rustic"
         showImage={true}
-        image="https://mall-cms.storage.yandexcloud.net/common/images/2e65f9b9-7aa8-40bc-99f9-915ed72897b0.svg"
+        image={img}
+        // image="https://mall-cms.storage.yandexcloud.net/common/images/2e65f9b9-7aa8-40bc-99f9-915ed72897b0.svg"
         articul="P94M-LJ4K"
         currentColor={{ name: "Красный", value: "red" }}
         currentSize="Большой"
@@ -29,11 +33,11 @@ function App() {
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickDeleteButton={() => console.log("Delete")}
         onClickCartButton={() => console.log("Add To Cart")}
-      />
+      /> */}
 
       {/* <MallProductCard
         cardTitle="Диван Лени Textile Rustic"
-        image="https://mall-cms.storage.yandexcloud.net/common/images/2e65f9b9-7aa8-40bc-99f9-915ed72897b0.svg"
+        image={img2}
         articul="P94M-LJ4K"
         labels={true}
         labelsValues={[
@@ -55,7 +59,7 @@ function App() {
         onClickCartButton={() => console.log("Add To Cart")}
       /> */}
 
-      {/* <MallProductCardPage
+      <MallProductCardPage
         title="Диван Лени Textile Rustic"
         description="Компактный диван «Каир» с универсальным углом гармонично впишется в
             любой современный или сдержанный классический интерьер. Эта модель
@@ -96,7 +100,7 @@ function App() {
         onClickSizeButton={(value) => console.log(value)}
         onClickColorButton={(value) => console.log(value)}
         onClickCartButton={(value) => console.log(value)}
-      /> */}
+      />
     </div>
   );
 }
