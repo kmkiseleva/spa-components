@@ -19,6 +19,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 144px;
+  height: 144px;
 }
 
 .mall-card-long__image img {
@@ -83,6 +85,8 @@ button {
 }
 
 .mall-card-long__prices {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 14px;
   margin-bottom: 4px;
   font-size: 20px;
@@ -90,8 +94,11 @@ button {
   line-height: 28px;
 }
 
+.mall-card-long__prices span {
+  margin-right: 8px;
+}
+
 .mall-prices-long__old {
-  margin-left: 8px;
   text-decoration-line: line-through;
 }
 
@@ -122,7 +129,7 @@ button {
   }
 }
 
-@media (max-width: 648px) {
+@media (max-width: 658px) {
   .mall-card-long__block {
     padding: 10px;
   }
@@ -139,20 +146,10 @@ button {
     max-width: 310px;
   }
 
-  .mall-card-long__image img {
-    width: 200px;
-    height: 200px;
-  }
-
   .mall-card-long__middle,
   .mall-card-long__third-block {
     justify-items: center;
     justify-self: center;
-  }
-
-  .mall-card-long__prices {
-    margin-bottom: 15px;
-    font-size: 24px;
   }
 
   .mall-card-long__counter-block {
