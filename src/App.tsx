@@ -5,6 +5,11 @@ import MallProductCardLong from "./components/ProductCardLong/MallProductCardLon
 
 import img from "./assets/img.jpg";
 import img2 from "./assets/img-2.jpg";
+import img3 from "./assets/1.jpg";
+import img4 from "./assets/2.jpg";
+import img5 from "./assets/3.jpg";
+import img6 from "./assets/4.jpg";
+import img7 from "./assets/test-img.jpg";
 
 function App() {
   return (
@@ -35,9 +40,9 @@ function App() {
         onClickCartButton={() => console.log("Add To Cart")}
       /> */}
 
-      {/* <MallProductCard
+      <MallProductCard
         cardTitle="Диван Лени Textile Rustic"
-        image={img2}
+        image={img7}
         articul="P94M-LJ4K"
         labels={true}
         labelsValues={[
@@ -57,9 +62,9 @@ function App() {
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickCompareButton={() => console.log("Compare")}
         onClickCartButton={() => console.log("Add To Cart")}
-      /> */}
+      />
 
-      <MallProductCardPage
+      {/* <MallProductCardPage
         title="Диван Лени Textile Rustic"
         description="Компактный диван «Каир» с универсальным углом гармонично впишется в
             любой современный или сдержанный классический интерьер. Эта модель
@@ -100,7 +105,7 @@ function App() {
         onClickSizeButton={(value) => console.log(value)}
         onClickColorButton={(value) => console.log(value)}
         onClickCartButton={(value) => console.log(value)}
-      />
+      /> */}
     </div>
   );
 }
