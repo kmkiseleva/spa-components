@@ -14,7 +14,7 @@ import img7 from "./assets/test-img.jpg";
 function App() {
   return (
     <div className="App">
-      {/* <MallProductCardLong
+      <MallProductCardLong
         cardTitle="Диван Лени Textile Rustic"
         showImage={true}
         image={img7}
@@ -38,7 +38,7 @@ function App() {
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickDeleteButton={() => console.log("Delete")}
         onClickCartButton={() => console.log("Add To Cart")}
-      /> */}
+      />
 
       {/* <MallProductCard
         cardTitle="Диван Лени Textile Rustic"
@@ -64,7 +64,7 @@ function App() {
         onClickCartButton={() => console.log("Add To Cart")}
       /> */}
 
-      <MallProductCardPage
+      {/* <MallProductCardPage
         title="Диван Лени Textile Rustic"
         description="Компактный диван «Каир» с универсальным углом гармонично впишется в
             любой современный или сдержанный классический интерьер. Эта модель
@@ -105,7 +105,7 @@ function App() {
         onClickSizeButton={(value) => console.log(value)}
         onClickColorButton={(value) => console.log(value)}
         onClickCartButton={(value) => console.log(value)}
-      />
+      /> */}
     </div>
   );
 }

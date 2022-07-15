@@ -81,9 +81,24 @@ export interface IMallProductCardLong {
   textSecondaryColor?: string;
 
   /**
-   * Внешние отступы
+   * Внешний верхний отступ
    */
-  margin?: string;
+  marginTop?: string;
+
+  /**
+   * Внешний нижний отступ
+   */
+  marginBottom?: string;
+
+  /**
+   * Внешний левый отступ
+   */
+  marginLeft?: string;
+
+  /**
+   * Внешний правый отступ
+   */
+  marginRight?: string;
 
   /**
    * Толщина обводки карточки

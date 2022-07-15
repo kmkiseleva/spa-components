@@ -19,7 +19,10 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
   accentSecondaryColor = '#fbcd56',
   textMainColor = '#000000',
   textSecondaryColor = '#8a8a8a',
-  margin = '50px auto',
+  marginTop = '32px',
+  marginRight = 'auto',
+  marginBottom = '32px',
+  marginLeft = 'auto',
   borderWidth = '1px',
   borderColor = '#e9e9e9',
   borderRadius = '8px',
@@ -35,7 +38,10 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
     <div
       className="mall-card-long__block"
       style={{
-        margin: margin,
+        marginTop: marginTop,
+        marginRight: marginRight,
+        marginBottom: marginBottom,
+        marginLeft: marginLeft,
         borderWidth: borderWidth,
         borderColor: borderColor,
         borderRadius: borderRadius,
