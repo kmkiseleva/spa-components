@@ -16,8 +16,30 @@ function App() {
   return (
     <div className="App">
       <MallContact
-        padding="24px 0"
-        margin="0"
+        padding="0"
+        margin="0 auto"
+        backgroundColor="transparent"
+        fontSize="15px"
+        textMainColor="#000"
+        accentColor="#0364ed"
+        contactTitle="Отдел маркетинга"
+        phone="88002342213"
+        email="marketing@mallcms.ru"
+      />
+      <MallContact
+        padding="0"
+        margin="0 auto"
+        backgroundColor="transparent"
+        fontSize="15px"
+        textMainColor="#000"
+        accentColor="#0364ed"
+        contactTitle="Отдел маркетинга"
+        phone="88002342213"
+        email="marketing@mallcms.ru"
+      />
+      <MallContact
+        padding="0"
+        margin="0 auto"
         backgroundColor="transparent"
         fontSize="15px"
         textMainColor="#000"

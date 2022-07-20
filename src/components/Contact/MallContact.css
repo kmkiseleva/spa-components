@@ -1,14 +1,42 @@
 .mall-contact__container {
   max-width: 1240px;
   min-height: 70px;
-  border-top: 1px solid #E9E9E9;
-  border-bottom: 1px solid #E9E9E9;
+  border-top: 1px solid #e9e9e9;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-weight: 500;
   line-height: 22px;
 }
 
+.mall-contact__title {
+  width: 40%;
+  margin-right: 10px;
+}
+
+.mall-contact__data {
+  width: 60%;
+  display: flex;
+  justify-content: start;
+}
+
+.mall-contact__value {
+  margin-right: 64px;
+}
+
 .mall-contact__value a {
   font-weight: 400;
+  text-decoration: none;
+}
+
+@media (max-width: 744px) {
+  .mall-contact__title {
+    width: 25%;
+  }
+
+  .mall-contact__data {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
