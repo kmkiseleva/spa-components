@@ -34,7 +34,7 @@ export interface IMallProductCardPage {
   /**
    * Название товара
    */
-  title: string;
+  cardTitle: string;
 
   /**
    * Изображения для галерии

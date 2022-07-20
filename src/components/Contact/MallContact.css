@@ -1,0 +1,14 @@
+.mall-contact__container {
+  max-width: 1240px;
+  min-height: 70px;
+  border-top: 1px solid #E9E9E9;
+  border-bottom: 1px solid #E9E9E9;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.mall-contact__value a {
+  font-weight: 400;
+}

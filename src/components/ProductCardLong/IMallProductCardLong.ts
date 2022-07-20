@@ -118,7 +118,7 @@ export interface IMallProductCardLong {
   /**
    * Фон карточки
    */
-  background?: string;
+  backgroundColor?: string;
 
   /**
    * Обработчик клика по кнопке Избранное

@@ -17,7 +17,7 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
   availableCount = '2',
   accentColor = '#0364ed',
   accentSecondaryColor = '#fbcd56',
-  textMainColor = '#000000',
+  textMainColor = '#000',
   textSecondaryColor = '#8a8a8a',
   marginTop = '32px',
   marginRight = 'auto',
@@ -26,7 +26,7 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
   borderWidth = '1px',
   borderColor = '#e9e9e9',
   borderRadius = '8px',
-  background = '#ffffff',
+  backgroundColor = '#fff',
   onClickFavoritesButton,
   onClickDeleteButton,
   onClickCartButton,
@@ -45,7 +45,7 @@ const MallProductCardLong: FC<IMallProductCardLong> = ({
         borderWidth: borderWidth,
         borderColor: borderColor,
         borderRadius: borderRadius,
-        background: background,
+        background: backgroundColor,
       }}
       onMouseOver={() => setActive(true)}
       onFocus={() => setActive(true)}

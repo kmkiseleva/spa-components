@@ -1,4 +1,5 @@
 import "./App.css";
+import MallContact from "./components/Contact/MallContact";
 import MallProductCard from "./components/ProductCard/MallProductCard";
 import MallProductCardPage from "./components/ProductCardPage/MallProductCardPage";
 import MallProductCardLong from "./components/ProductCardLong/MallProductCardLong";
@@ -14,7 +15,19 @@ import img7 from "./assets/test-img.jpg";
 function App() {
   return (
     <div className="App">
-      <MallProductCardLong
+      <MallContact
+        padding="24px 0"
+        margin="0"
+        backgroundColor="transparent"
+        fontSize="15px"
+        textMainColor="#000"
+        accentColor="#0364ed"
+        contactTitle="Отдел маркетинга"
+        phone="88002342213"
+        email="marketing@mallcms.ru"
+      />
+
+      {/* <MallProductCardLong
         cardTitle="Диван Лени Textile Rustic"
         showImage={true}
         image={img7}
@@ -38,7 +51,7 @@ function App() {
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickDeleteButton={() => console.log("Delete")}
         onClickCartButton={() => console.log("Add To Cart")}
-      />
+      /> */}
 
       {/* <MallProductCard
         cardTitle="Диван Лени Textile Rustic"

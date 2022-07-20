@@ -9,14 +9,14 @@ const MallBreadcrumbs: FC<IMallBreadcrumbs> = ({
   breadcrumbsData,
   position,
   separator,
-  color = '#8A8A8A',
-  minHeight = '20px',
-  margin = '51px 32px',
+  fontSize = '13px',
+  margin = '50px',
+  textSecondaryColor = '#8a8a8a',
 }) => {
   const styleSettings = {
-    color: color,
+    color: textSecondaryColor,
+    fontSize: fontSize,
     justifyContent: position,
-    minHeight: minHeight,
     margin: margin,
   };
 

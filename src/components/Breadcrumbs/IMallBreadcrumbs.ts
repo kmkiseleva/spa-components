@@ -22,17 +22,17 @@ export interface IMallBreadcrumbs {
   separator: '/' | '-' | '>';
 
   /**
-   * Цвет текста
+   * Размер текста
    */
-  color?: string;
-
-  /**
-   * Минимальное значение высоты
-   */
-  minHeight?: string;
+  fontSize?: string;
 
   /**
    * Внешние отступы
    */
   margin?: string;
+
+  /**
+   * Второстепенный цвет текста
+   */
+  textSecondaryColor?: string;
 }

@@ -39,6 +39,7 @@
   }
 
   .mall-product-card__image {
+    order: 1;
     width: 288px;
     height: 288px;
   }
@@ -49,20 +50,16 @@
   }
 
   .mall-small-images {
-    order: 2;
     display: flex;
     flex-wrap: wrap;
+    order: 2;
     margin-left: 10px;
   }
 
   .mall-small-images img {
-    margin-right: 9px;
     width: 100px;
     height: 96px;
-  }
-
-  .mall-product-card__image {
-    order: 1;
+    margin-right: 9px;
   }
 }
 
