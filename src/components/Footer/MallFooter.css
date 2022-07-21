@@ -10,6 +10,13 @@
   margin: 35px 0 15px;
 }
 
+.logo-container__logo {
+  display: block;
+  width: 145px;
+  height: 24px;
+  object-fit: contain;
+}
+
 .phone {
   display: flex;
   align-items: center;

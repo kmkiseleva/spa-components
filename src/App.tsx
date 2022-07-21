@@ -1,6 +1,8 @@
 import "./App.css";
 import MallAddress from "./components/Address/MallAddress";
 import MallContact from "./components/Contact/MallContact";
+import MallMenu from "./components/Menu/MallMenu";
+import MallFooter from "./components/Footer/MallFooter";
 import MallProductCard from "./components/ProductCard/MallProductCard";
 import MallProductCardPage from "./components/ProductCardPage/MallProductCardPage";
 import MallProductCardLong from "./components/ProductCardLong/MallProductCardLong";
@@ -12,11 +14,69 @@ import img4 from "./assets/2.jpg";
 import img5 from "./assets/3.jpg";
 import img6 from "./assets/4.jpg";
 import img7 from "./assets/test-img.jpg";
+import mallcms from "./assets/mallcms-logo.png";
 
 function App() {
   return (
     <div className="App">
-      <MallAddress
+      <MallMenu
+        borderRadius="4px"
+        logo={img3}
+        logoLink="#"
+        accentColor="#0364ed"
+        textMainColor="#000"
+        textSecondaryColor="#8a8a8a"
+        navigationData={[
+          { url: "#", title: "Акции" },
+          { url: "#", title: "Новинки" },
+          { url: "#", title: "Одежда" },
+          { url: "#", title: "Мебель" },
+          { url: "#", title: "Бытовая техника" },
+          { url: "#", title: "Спортивные товары" },
+          { url: "#", title: "Косметика" },
+        ]}
+        search={true}
+        login={true}
+        basket={true}
+        phone="88005550011"
+        onSearch={() => {}}
+        onLogin={() => {}}
+        onBasket={() => {}}
+      />
+
+      <MallFooter
+        padding="0 16px"
+        phone="8 800 555-00-11"
+        logo={mallcms}
+        menuFontSize="15px"
+        accentColor="#0364ed"
+        textMainColor="#000"
+        textSecondaryColor="#8a8a8a"
+        backgroundSecondaryColor="#f5f5f6"
+        phoneFontSize="15px"
+        vk="#"
+        ok="#"
+        instagram="#"
+        twitter="#"
+        telegram="#"
+        youtube="#"
+        facebook="#"
+        social={true}
+        companyName="2022 @ OOO The Company Name"
+        menuList={[
+          { url: "#", title: "Каталог" },
+          { url: "#", title: "О компании" },
+          { url: "#", title: "Контакты" },
+          { url: "#", title: "Доставка" },
+          { url: "#", title: "Оплата" },
+          { url: "#", title: "Личный кабинет" },
+        ]}
+        privacy_policy="#"
+        public_offer="#"
+        constructor_url="#"
+      />
+
+      {/* <MallAddress
         padding="48px 0 0"
         margin="0 auto 48px auto"
         backgroundColor="transparent"
@@ -41,7 +101,7 @@ function App() {
             address: "Екатеринбург, ул. Комсомольская, 1",
           },
         ]}
-      />
+      /> */}
 
       {/* <MallContact
         padding="0"

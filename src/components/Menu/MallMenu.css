@@ -44,10 +44,10 @@
 
 .mall-menu__header-top .mall-menu__header-img {
   display: block;
-  float: left;
-  min-width: 140px;
+  width: 145px;
   height: 24px;
-  margin: 32px 32px 32px 0;
+  object-fit: contain;
+  margin: 32px 0 32px 0;
 }
 
 .mall-menu__login,
@@ -150,16 +150,25 @@
   max-height: 100vh;
 }
 
-.mall-menu__header .mall-menu__menu-btn:checked ~ .mall-menu__menu-icon .mall-menu__nav-icon {
+.mall-menu__header
+  .mall-menu__menu-btn:checked
+  ~ .mall-menu__menu-icon
+  .mall-menu__nav-icon {
   background: transparent;
 }
 
-.mall-menu__header .mall-menu__menu-btn:checked ~ .mall-menu__menu-icon .mall-menu__nav-icon::before {
+.mall-menu__header
+  .mall-menu__menu-btn:checked
+  ~ .mall-menu__menu-icon
+  .mall-menu__nav-icon::before {
   top: 0;
   transform: rotate(-45deg);
 }
 
-.mall-menu__header .mall-menu__menu-btn:checked ~ .mall-menu__menu-icon .mall-menu__nav-icon::after {
+.mall-menu__header
+  .mall-menu__menu-btn:checked
+  ~ .mall-menu__menu-icon
+  .mall-menu__nav-icon::after {
   top: 0;
   transform: rotate(45deg);
 }
