@@ -52,7 +52,7 @@ const MallAddress: FC<IMallAddress> = ({
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 750 },
@@ -63,9 +63,6 @@ const MallAddress: FC<IMallAddress> = ({
       items: 1,
     },
   };
-
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
-  window.addEventListener("resize", () => setWindowSize(window.innerWidth));
 
   return (
     <YMaps>
@@ -100,27 +97,6 @@ const MallAddress: FC<IMallAddress> = ({
             </div>
           ))}
         </Carousel>
-        <div className="mall-address__row">
-          {/* {addresses.map((item, index) => (
-            <div
-              key={index}
-              className="mall-address__item"
-              style={
-                active === index
-                  ? { border: "2px solid", borderColor: accentColor }
-                  : { border: "1px solid #e9e9e9" }
-              }
-              onClick={() => onClickAddressHandler(index)}
-              onKeyDown={() => onClickAddressHandler(index)}
-              role="button"
-              tabIndex={index}
-            >
-              <div className="mall-address__item-name">{item.name}</div>
-              <div className="mall-address__item-address">{item.address}</div>
-            </div>
-          ))} */}
-        </div>
-
         <div
           className="mall-address__map"
           style={{ borderRadius: borderRadius }}
