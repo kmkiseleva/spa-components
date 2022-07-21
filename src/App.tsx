@@ -19,7 +19,7 @@ import mallcms from "./assets/mallcms-logo.png";
 function App() {
   return (
     <div className="App">
-      <MallMenu
+      {/* <MallMenu
         borderRadius="4px"
         logo={img3}
         logoLink="#"
@@ -74,9 +74,9 @@ function App() {
         privacy_policy="#"
         public_offer="#"
         constructor_url="#"
-      />
+      /> */}
 
-      {/* <MallAddress
+      <MallAddress
         padding="48px 0 0"
         margin="0 auto 48px auto"
         backgroundColor="transparent"
@@ -87,21 +87,25 @@ function App() {
           {
             name: "Центральный офис",
             address: "Екатеринбург, ул. Ленина, 52, офис 16",
+            coordinates: [56.839848, 60.624981],
           },
           {
             name: "Магазин на Ленина",
             address: "Екатеринбург, ул. Ленина, 156",
+            coordinates: [56.839513, 60.612404],
           },
           {
             name: "Магазин на Восточной",
             address: "Екатеринбург, ул. Восточная, 21б",
+            coordinates: [56.828005, 60.638545],
           },
           {
             name: "Сервисный центр",
             address: "Екатеринбург, ул. Комсомольская, 1",
+            coordinates: [56.856914, 60.654347],
           },
         ]}
-      /> */}
+      />
 
       {/* <MallContact
         padding="0"

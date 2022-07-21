@@ -37,12 +37,6 @@
 }
 
 .mall-address__map {
-  width: 1240px;
+  max-width: 1240px;
   height: 399px;
-}
-
-.mall-address__map img {
-  width: 1240px;
-  height: 399px;
-  object-fit: contain;
 }

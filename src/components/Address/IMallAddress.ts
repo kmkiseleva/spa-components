@@ -37,5 +37,5 @@ export interface IMallAddress {
   /**
    * Массив адресов
    */
-  addresses: { name: string; address: string }[];
+  addresses: { name: string; address: string, coordinates: number[]}[];
 }
