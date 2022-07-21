@@ -17,7 +17,7 @@ export interface IMallMenu {
   /**
    * Массив с сылками и названием элементов меню
    */
-  navigation?: { url: string; title: string }[];
+  navigationData?: { url: string; title: string }[];
 
   /**
    * Показывать ли поиск
@@ -43,6 +43,11 @@ export interface IMallMenu {
    * Акцентный цвет
    */
   accentColor?: string;
+
+  /**
+   * Второстепенный цвет фона
+   */
+  backgroundSecondaryColor?: string;
 
   /**
    * Основной цвет текста

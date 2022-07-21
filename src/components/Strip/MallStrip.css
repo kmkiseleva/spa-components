@@ -1,0 +1,5 @@
+.mall-strip {
+  display: flex;
+  flex-flow: column wrap;
+  margin: auto;
+}

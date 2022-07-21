@@ -1,0 +1,61 @@
+.pagination-container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin: 40px;
+}
+
+.arrows-button,
+.arrow-container {
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 2px;
+}
+
+.arrows-button {
+  padding: 2px 5px 0;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid;
+}
+
+.arrow-container:first-child {
+  margin-right: 8px;
+}
+
+.list-item {
+  margin-right: 8px;
+}
+
+.list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.current-page,
+.page {
+  min-width: 32px;
+  min-height: 32px;
+  margin: 0;
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  outline: none;
+}
+
+.page.hover-page:hover {
+  border: 1px solid;
+}
+
+.arrows-button.hover-arrow {
+  border: none;
+}
+
+.arrows-button.hover-arrow:hover {
+  border: 1px solid #0364ed;
+}

@@ -1,0 +1,15 @@
+.mall-textarea {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 16px;
+  color: #000;
+  resize: none;
+}
+
+.mall-textarea__error {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #e15554;
+  text-align: left;
+}

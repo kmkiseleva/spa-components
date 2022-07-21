@@ -1,0 +1,19 @@
+.mall-divider__text-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.mall-divider__before,
+.mall-divider__after {
+  display: inline-block;
+  width: 100%;
+  border-top-style: solid;
+}
+
+.mall-divider__before {
+  margin-right: 10px;
+}
+
+.mall-divider__after {
+  margin-left: 10px;
+}

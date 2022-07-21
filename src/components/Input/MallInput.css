@@ -1,0 +1,27 @@
+.mall-input {
+  box-sizing: border-box;
+  margin: 0;
+  color: #000;
+}
+
+.mall-input[type="number"]::-webkit-outer-spin-button,
+.mall-input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.mall-input[type="time"]:hover:not(:disabled) {
+  cursor: text;
+}
+
+.mall-input[type="time"]:hover:disabled {
+  cursor: not-allowed;
+}
+
+.mall-input__error {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #e15554;
+  text-align: left;
+}

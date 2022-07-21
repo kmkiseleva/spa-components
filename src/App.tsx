@@ -1,4 +1,5 @@
 import "./App.css";
+import MallAddress from "./components/Address/MallAddress";
 import MallContact from "./components/Contact/MallContact";
 import MallProductCard from "./components/ProductCard/MallProductCard";
 import MallProductCardPage from "./components/ProductCardPage/MallProductCardPage";
@@ -15,7 +16,34 @@ import img7 from "./assets/test-img.jpg";
 function App() {
   return (
     <div className="App">
-      <MallContact
+      <MallAddress
+        padding="48px 0 0"
+        margin="0 auto 48px auto"
+        backgroundColor="transparent"
+        textMainColor="#000"
+        accentColor="#0364ed"
+        borderRadius="8px"
+        addresses={[
+          {
+            name: "Центральный офис",
+            address: "Екатеринбург, ул. Ленина, 52, офис 16",
+          },
+          {
+            name: "Магазин на Ленина",
+            address: "Екатеринбург, ул. Ленина, 156",
+          },
+          {
+            name: "Магазин на Восточной",
+            address: "Екатеринбург, ул. Восточная, 21б",
+          },
+          {
+            name: "Сервисный центр",
+            address: "Екатеринбург, ул. Комсомольская, 1",
+          },
+        ]}
+      />
+
+      {/* <MallContact
         padding="0"
         margin="0 auto"
         backgroundColor="transparent"
@@ -47,7 +75,7 @@ function App() {
         contactTitle="Отдел маркетинга"
         phone="88002342213"
         email="marketing@mallcms.ru"
-      />
+      /> */}
 
       {/* <MallProductCardLong
         cardTitle="Диван Лени Textile Rustic"

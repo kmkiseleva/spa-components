@@ -70,7 +70,7 @@ const MallFooter: FC<IMallFooter> = ({
               style={phoneStyle}
               className="phone"
             >
-              <a href={`tel:#${phone}`}>{phone}</a>
+              <a href={`tel:+${phone}`}>{phone}</a>
             </div>
           )}
         </div>

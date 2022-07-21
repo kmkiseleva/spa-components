@@ -9,9 +9,10 @@ const MallMenu: FC<IMallMenu> = ({
   borderRadius,
   logo,
   accentColor = '#0364ed',
+  backgroundSecondaryColor = '#f5f5f6',
   textMainColor = '#000',
   textSecondaryColor = '#8a8a8a',
-  navigation,
+  navigationData,
   search,
   login,
   basket,
@@ -21,17 +22,9 @@ const MallMenu: FC<IMallMenu> = ({
   onBasket,
   logoLink,
 }) => {
-  const styleSettings = {
-    backgroundColor: accentColor,
-    borderRadius: borderRadius,
-  };
-
   return (
     <header className="mall-menu__header">
-      <div
-        style={styleSettings}
-        className="mall-menu__header-wrapper"
-      >
+      <div className="mall-menu__header-wrapper">
         <div className="mall-menu__header-top">
           {logo && (
             <a href={logoLink}>
@@ -64,7 +57,11 @@ const MallMenu: FC<IMallMenu> = ({
               </button>
               <input
                 className="mall-menu__search"
-                style={{ color: textSecondaryColor }}
+                style={{
+                  color: textSecondaryColor,
+                  backgroundColor: backgroundSecondaryColor,
+                  borderRadius: borderRadius,
+                }}
                 placeholder="Поиск товаров"
               />
             </div>
@@ -73,7 +70,7 @@ const MallMenu: FC<IMallMenu> = ({
             <div className="mall-menu__phone">
               <a
                 style={{ color: textMainColor }}
-                href={`tel:#${phone}`}
+                href={`tel:+${phone}`}
               >
                 {phone}
               </a>
@@ -101,7 +98,7 @@ const MallMenu: FC<IMallMenu> = ({
       </div>
 
       <div
-        style={styleSettings}
+        style={{ backgroundColor: accentColor }}
         className="mall-menu__nav-wrapper"
       >
         <nav className="mall-menu__nav">
@@ -118,9 +115,9 @@ const MallMenu: FC<IMallMenu> = ({
             <span className="mall-menu__nav-icon" />
           </label>
 
-          {navigation?.length && (
+          {navigationData?.length && (
             <ul className="mall-menu__menu">
-              {navigation?.map((item) => (
+              {navigationData?.map((item) => (
                 <li key={item.url}>
                   <Link href={item.url}>
                     <a

@@ -1,0 +1,23 @@
+/* Тут самые общие стили кнопки, интерактивные состояния, медиазапросы и псевдоэлементы */
+
+.mall-button {
+  display: inline-block;
+  min-height: 56px;
+  padding: 16px 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.mall-button:active {
+  transform: translateY(1px);
+}
+
+.mall-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.mall-button:active:disabled {
+  transform: none;
+}
