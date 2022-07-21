@@ -1,4 +1,6 @@
 import React, { FC, useState } from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import { YMaps, Map, FullscreenControl, Placemark } from "react-yandex-maps";
 import { IMallAddress } from "./IMallAddress";
 import "./MallAddress.css";
@@ -43,11 +45,42 @@ const MallAddress: FC<IMallAddress> = ({
   const onClickAddressHandler = (index: number) => {
     setActive(index);
   };
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 3,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 750 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 750, min: 0 },
+      items: 1,
+    },
+  };
+
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  window.addEventListener("resize", () => setWindowSize(window.innerWidth));
 
   return (
     <YMaps>
       <div className="mall-address__container" style={styleSettings}>
-        <div className="mall-address__row">
+        <Carousel
+          draggable
+          responsive={responsive}
+          swipeable
+          infinite={true}
+          centerMode={false}
+          keyBoardControl={true}
+          transitionDuration={500}
+          containerClass="mall-address__row"
+          removeArrowOnDeviceType={["mobile"]}
+        >
           {addresses.map((item, index) => (
             <div
               key={index}
@@ -66,6 +99,26 @@ const MallAddress: FC<IMallAddress> = ({
               <div className="mall-address__item-address">{item.address}</div>
             </div>
           ))}
+        </Carousel>
+        <div className="mall-address__row">
+          {/* {addresses.map((item, index) => (
+            <div
+              key={index}
+              className="mall-address__item"
+              style={
+                active === index
+                  ? { border: "2px solid", borderColor: accentColor }
+                  : { border: "1px solid #e9e9e9" }
+              }
+              onClick={() => onClickAddressHandler(index)}
+              onKeyDown={() => onClickAddressHandler(index)}
+              role="button"
+              tabIndex={index}
+            >
+              <div className="mall-address__item-name">{item.name}</div>
+              <div className="mall-address__item-address">{item.address}</div>
+            </div>
+          ))} */}
         </div>
 
         <div
