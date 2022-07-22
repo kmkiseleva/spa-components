@@ -82,7 +82,7 @@ function App() {
         backgroundColor="transparent"
         textMainColor="#000"
         accentColor="#0364ed"
-        borderRadius="8px"
+        borderRadius="25px"
         addresses={[
           {
             name: "Центральный офис",

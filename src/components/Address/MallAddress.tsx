@@ -1,36 +1,36 @@
-import React, { FC, useState } from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import { YMaps, Map, FullscreenControl, Placemark } from "react-yandex-maps";
-import { IMallAddress } from "./IMallAddress";
-import "./MallAddress.css";
+import React, { FC, useState } from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { YMaps, Map, FullscreenControl, Placemark } from 'react-yandex-maps';
+import { IMallAddress } from './IMallAddress';
+import './MallAddress.css';
 
 const MallAddress: FC<IMallAddress> = ({
-  padding = "48px 0 0",
-  margin = "0 auto 48px auto",
-  backgroundColor = "transparent",
-  textMainColor = "#000",
-  accentColor = "#0364ed",
-  borderRadius = "8px",
+  padding = '48px 0 0',
+  margin = '0 auto 48px auto',
+  backgroundColor = 'transparent',
+  textMainColor = '#000',
+  accentColor = '#0364ed',
+  borderRadius = '8px',
   addresses = [
     {
-      name: "Центральный офис",
-      address: "Екатеринбург, ул. Ленина, 52, офис 16",
+      name: 'Центральный офис',
+      address: 'Екатеринбург, ул. Ленина, 52, офис 16',
       coordinates: [56.839848, 60.624981],
     },
     {
-      name: "Магазин на Ленина",
-      address: "Екатеринбург, ул. Ленина, 156",
+      name: 'Магазин на Ленина',
+      address: 'Екатеринбург, ул. Ленина, 156',
       coordinates: [56.839513, 60.612404],
     },
     {
-      name: "Магазин на Восточной",
-      address: "Екатеринбург, ул. Восточная, 21б",
+      name: 'Магазин на Восточной',
+      address: 'Екатеринбург, ул. Восточная, 21б',
       coordinates: [56.828005, 60.638545],
     },
     {
-      name: "Сервисный центр",
-      address: "Екатеринбург, ул. Комсомольская, 1",
+      name: 'Сервисный центр',
+      address: 'Екатеринбург, ул. Комсомольская, 1',
       coordinates: [56.856914, 60.654347],
     },
   ],
@@ -38,7 +38,6 @@ const MallAddress: FC<IMallAddress> = ({
   const styleSettings = {
     padding: padding,
     margin: margin,
-    background: backgroundColor,
     color: textMainColor,
   };
   const [active, setActive] = useState(0);
@@ -66,7 +65,10 @@ const MallAddress: FC<IMallAddress> = ({
 
   return (
     <YMaps>
-      <div className="mall-address__container" style={styleSettings}>
+      <div
+        className="mall-address__container"
+        style={styleSettings}
+      >
         <Carousel
           draggable
           responsive={responsive}
@@ -76,7 +78,7 @@ const MallAddress: FC<IMallAddress> = ({
           keyBoardControl={true}
           transitionDuration={500}
           containerClass="mall-address__row"
-          removeArrowOnDeviceType={["mobile"]}
+          removeArrowOnDeviceType={['mobile']}
         >
           {addresses.map((item, index) => (
             <div
@@ -84,8 +86,13 @@ const MallAddress: FC<IMallAddress> = ({
               className="mall-address__item"
               style={
                 active === index
-                  ? { border: "2px solid", borderColor: accentColor }
-                  : { border: "1px solid #e9e9e9" }
+                  ? {
+                      border: '2px solid',
+                      borderColor: accentColor,
+                      borderRadius: borderRadius,
+                      background: backgroundColor,
+                    }
+                  : { border: '1px solid #e9e9e9', borderRadius: borderRadius, background: backgroundColor }
               }
               onClick={() => onClickAddressHandler(index)}
               onKeyDown={() => onClickAddressHandler(index)}
@@ -97,10 +104,7 @@ const MallAddress: FC<IMallAddress> = ({
             </div>
           ))}
         </Carousel>
-        <div
-          className="mall-address__map"
-          style={{ borderRadius: borderRadius }}
-        >
+        <div className="mall-address__map">
           <Map
             state={{
               center: addresses[active].coordinates,
@@ -109,7 +113,7 @@ const MallAddress: FC<IMallAddress> = ({
             width="100%"
             height="100%"
           >
-            <FullscreenControl options={{ float: "left" }} />
+            <FullscreenControl options={{ float: 'left' }} />
             <Placemark geometry={addresses[active].coordinates} />
           </Map>
         </div>
