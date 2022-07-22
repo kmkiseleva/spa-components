@@ -76,7 +76,7 @@ function App() {
         constructor_url="#"
       /> */}
 
-      <MallAddress
+      {/* <MallAddress
         padding="48px 0 0"
         margin="0 auto 48px auto"
         backgroundColor="transparent"
@@ -105,7 +105,7 @@ function App() {
             coordinates: [56.856914, 60.654347],
           },
         ]}
-      />
+      /> */}
 
       {/* <MallContact
         padding="0"
@@ -167,7 +167,7 @@ function App() {
         onClickCartButton={() => console.log("Add To Cart")}
       /> */}
 
-      {/* <MallProductCard
+      <MallProductCard
         cardTitle="Диван Лени Textile Rustic"
         image={img7}
         articul="P94M-LJ4K"
@@ -184,12 +184,13 @@ function App() {
         cartButton="small"
         accentColor="#0364ED"
         accentSecondaryColor="#3BB273"
+        backgroundColor="#fff"
         textMainColor="#000000"
         textSecondaryColor="#8A8A8A"
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickCompareButton={() => console.log("Compare")}
         onClickCartButton={() => console.log("Add To Cart")}
-      /> */}
+      />
 
       {/* <MallProductCardPage
         title="Диван Лени Textile Rustic"

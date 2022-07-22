@@ -6,8 +6,8 @@
 .mall-address__row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 24px;
   max-width: 1240px;
+  margin-bottom: 24px;
 }
 
 .mall-address__item {

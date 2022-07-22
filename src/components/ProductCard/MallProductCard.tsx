@@ -19,6 +19,7 @@ const MallProductCard: FC<IMallProductCard> = ({
   cartButton = 'small',
   accentColor = '#0364ed',
   accentSecondaryColor = '#3bb273',
+  backgroundColor = '#fff',
   textMainColor = '#000000',
   textSecondaryColor = '#8a8a8a',
   margin = '12px auto',
@@ -32,7 +33,7 @@ const MallProductCard: FC<IMallProductCard> = ({
   return (
     <div
       className="mall-card__block"
-      style={{ margin: margin, padding: padding }}
+      style={{ margin: margin, padding: padding, background: backgroundColor }}
       onMouseOver={() => setActive(true)}
       onFocus={() => setActive(true)}
       onMouseOut={() => setActive(false)}

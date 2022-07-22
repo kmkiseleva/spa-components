@@ -68,6 +68,11 @@ export interface IMallProductCard {
   accentSecondaryColor?: string;
 
   /**
+   * Фон карточки
+   */
+  backgroundColor?: string;
+
+  /**
    * Основной цвет текста
    */
   textMainColor?: string;
