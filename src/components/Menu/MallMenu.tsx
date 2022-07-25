@@ -1,17 +1,17 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import Link from 'next/link';
-import { IMallMenu } from './IMallMenu';
-import './MallMenu.css';
+import Link from "next/link";
+import { IMallMenu } from "./IMallMenu";
+import "./MallMenu.css";
 
 const MallMenu: FC<IMallMenu> = ({
   borderRadius,
   logo,
-  accentColor = '#0364ed',
-  backgroundSecondaryColor = '#f5f5f6',
-  textMainColor = '#000',
-  textSecondaryColor = '#8a8a8a',
+  accentColor = "#0364ed",
+  backgroundSecondaryColor = "#f5f5f6",
+  textMainColor = "#000",
+  textSecondaryColor = "#8a8a8a",
   navigationData,
   search,
   login,
@@ -28,20 +28,17 @@ const MallMenu: FC<IMallMenu> = ({
         <div className="mall-menu__header-top">
           {logo && (
             <a href={logoLink}>
-              {' '}
+              {" "}
               <img
                 className="mall-menu__header-img"
                 src={logo}
                 alt="logo"
-              />{' '}
+              />{" "}
             </a>
           )}
           {search && (
             <div className="mall-menu__search-block">
-              <button
-                onClick={onSearch}
-                className="mall-menu__search-button"
-              >
+              <button onClick={onSearch} className="mall-menu__search-button">
                 <svg
                   width="24"
                   height="24"
@@ -68,10 +65,7 @@ const MallMenu: FC<IMallMenu> = ({
           )}
           {phone && (
             <div className="mall-menu__phone">
-              <a
-                style={{ color: textMainColor }}
-                href={`tel:+${phone}`}
-              >
+              <a style={{ color: textMainColor }} href={`tel:+${phone}`}>
                 {phone}
               </a>
             </div>
@@ -108,10 +102,7 @@ const MallMenu: FC<IMallMenu> = ({
             id="menu-btn"
           />
           {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-          <label
-            className="mall-menu__menu-icon"
-            htmlFor="menu-btn"
-          >
+          <label className="mall-menu__menu-icon" htmlFor="menu-btn">
             <span className="mall-menu__nav-icon" />
           </label>
 
@@ -120,10 +111,7 @@ const MallMenu: FC<IMallMenu> = ({
               {navigationData?.map((item) => (
                 <li key={item.url}>
                   <Link href={item.url}>
-                    <a
-                      className="mall-menu__nav-link"
-                      href={item.url}
-                    >
+                    <a className="mall-menu__nav-link" href={item.url}>
                       {item.title}
                     </a>
                   </Link>

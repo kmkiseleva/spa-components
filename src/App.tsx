@@ -19,9 +19,9 @@ import mallcms from "./assets/mallcms-logo.png";
 function App() {
   return (
     <div className="App">
-      {/* <MallMenu
+      <MallMenu
         borderRadius="4px"
-        logo={img3}
+        logo={mallcms}
         logoLink="#"
         accentColor="#0364ed"
         textMainColor="#000"
@@ -74,7 +74,7 @@ function App() {
         privacy_policy="#"
         public_offer="#"
         constructor_url="#"
-      /> */}
+      />
 
       {/* <MallAddress
         padding="48px 0 0"
@@ -82,7 +82,7 @@ function App() {
         backgroundColor="transparent"
         textMainColor="#000"
         accentColor="#0364ed"
-        borderRadius="25px"
+        borderRadius="8px"
         addresses={[
           {
             name: "Центральный офис",
@@ -167,7 +167,7 @@ function App() {
         onClickCartButton={() => console.log("Add To Cart")}
       /> */}
 
-      <MallProductCard
+      {/* <MallProductCard
         cardTitle="Диван Лени Textile Rustic"
         image={img7}
         articul="P94M-LJ4K"
@@ -190,7 +190,7 @@ function App() {
         onClickFavoritesButton={() => console.log("Favorites")}
         onClickCompareButton={() => console.log("Compare")}
         onClickCartButton={() => console.log("Add To Cart")}
-      />
+      /> */}
 
       {/* <MallProductCardPage
         title="Диван Лени Textile Rustic"

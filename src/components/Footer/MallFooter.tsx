@@ -1,9 +1,9 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import Link from "next/link";
-import { IMallFooter } from "./IMallFooter";
-import "./MallFooter.css";
+import Link from 'next/link';
+import { IMallFooter } from './IMallFooter';
+import './MallFooter.css';
 
 const MallFooter: FC<IMallFooter> = ({
   _id,
@@ -11,9 +11,9 @@ const MallFooter: FC<IMallFooter> = ({
   phone,
   logo,
   menuFontSize,
-  accentColor = "#0364ed",
-  textMainColor = "#000",
-  textSecondaryColor = "#8a8a8a",
+  accentColor = '#0364ed',
+  textMainColor = '#000',
+  textSecondaryColor = '#8a8a8a',
   phoneFontSize,
   vk,
   ok,
@@ -23,7 +23,7 @@ const MallFooter: FC<IMallFooter> = ({
   youtube,
   facebook,
   social = true,
-  backgroundSecondaryColor = "#f5f5f6",
+  backgroundSecondaryColor = '#f5f5f6',
   companyName,
   menuList,
   privacy_policy,
@@ -46,24 +46,40 @@ const MallFooter: FC<IMallFooter> = ({
       style={{ background: backgroundSecondaryColor }}
       className="wrapper"
     >
-      <div className="mall-footer__container" style={{ padding: padding }}>
+      <div
+        className="mall-footer__container"
+        style={{ padding: padding }}
+      >
         <div className="logo-container">
           <Link href="/">
-            <a className="logo" href="/">
+            <a
+              className="logo"
+              href="/"
+            >
               {logo && (
-                <img className="logo-container__logo" src={logo} alt="logo" />
+                <img
+                  className="logo-container__logo"
+                  src={logo}
+                  alt="logo"
+                />
               )}
             </a>
           </Link>
 
           {phone && (
-            <div style={phoneStyle} className="phone">
+            <div
+              style={phoneStyle}
+              className="phone"
+            >
               <a href={`tel:+${phone}`}>{phone}</a>
             </div>
           )}
         </div>
         <div className="body">
-          <ul style={menuStyle} className="mall-footer__menu-list">
+          <ul
+            style={menuStyle}
+            className="mall-footer__menu-list"
+          >
             {menuList?.map((item) => (
               <li key={item.url}>
                 <Link href={item.url}>
@@ -83,10 +99,18 @@ const MallFooter: FC<IMallFooter> = ({
                   />
                 </li>
                 <li>
-                  <a title="vk" href={vk} className="social-item vk" />
+                  <a
+                    title="vk"
+                    href={vk}
+                    className="social-item vk"
+                  />
                 </li>
                 <li>
-                  <a title="ok" href={ok} className="social-item ok" />
+                  <a
+                    title="ok"
+                    href={ok}
+                    className="social-item ok"
+                  />
                 </li>
                 <li>
                   <a
@@ -122,7 +146,10 @@ const MallFooter: FC<IMallFooter> = ({
         </div>
         <div className="footer">
           {companyName && (
-            <div className="info" style={{ color: textSecondaryColor }}>
+            <div
+              className="info"
+              style={{ color: textSecondaryColor }}
+            >
               <span>{companyName}</span>
             </div>
           )}
